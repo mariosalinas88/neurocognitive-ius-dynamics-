@@ -13,9 +13,6 @@ Heterogeneous cognitive styles (neurodivergences as unique neural "hardware") in
 - `run.py`: Single-run simulation script with configurable arguments (e.g., --spectrum_level, --resilience_bias) and detailed reporting on per-profile outcomes (wealth, leadership, victims, etc.).
 - `run_batch.py`: Batch experiment script for comparative analysis across scenarios, generating `test_runs.csv` with inputs/outputs including dominant/victimized profiles and societal metrics.
 - `server.py`: Interactive Solara dashboard for visualizing simulation history, per-profile stats, probabilistic distributions, and hypothesis-driven metrics (e.g., ND contribution to development).
-- `test_runs.csv`: Sample results from batch runs, showing regime evolution, economic growth (total_wealth), and per-profile dominance/victimization/benefits.
-- `summary_evolution.csv`: Per-run model-level metrics (population, cooperation/violence rates, Gini, etc.).
-- `per_profile_stats.csv`: Per-run detailed stats by neuroprofile (wealth_avg for economy, leadership_avg for politics, rep_avg for social success, victims_avg for victimization, etc.).
 
 ## Installation
 
