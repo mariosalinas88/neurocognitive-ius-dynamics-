@@ -242,6 +242,7 @@ class Citizen(Agent):
             - 0.3 * reg
             - 0.2 * prosocial
         )
+        self.justice_threshold = self._compute_justice_threshold()
         reasoning = self.latent.get("reasoning", 0.5)
         self.conscious_core = self._init_conscious_core()
         self.conscious_core["self_model"]["agency"] = clamp01(0.5 * reasoning + 0.3 * self.latent.get("language", 0.5) + 0.2 * self.latent.get("sociality", 0.5))
@@ -268,11 +269,75 @@ class Citizen(Agent):
         self.memory: Dict[int, Dict[str, object]] = {}
         self.last_action: str | None = None
         self.alliance_id: str | None = None
+        self.justice_perception_history: List[Dict[str, float]] = []
+        self.last_justice_score = 0.5
 
     def reputation_total(self) -> float:
         high = max(self.reputation_coop, self.reputation_fear)
         low = min(self.reputation_coop, self.reputation_fear)
         return clamp01(high + 0.2 * low)
+
+    def _compute_justice_threshold(self) -> float:
+        empathy = self.latent.get("empathy", 0.5)
+        reasoning = self.latent.get("reasoning", 0.5)
+        empathy_factor = 1.0 - empathy * 0.5
+        dark_factor = 1.0 + self.dark_core * 0.5
+        reasoning_factor = 0.8 + reasoning * 0.4
+        threshold = empathy_factor * dark_factor * reasoning_factor
+        return clamp01(threshold)
+
+    def perceive_justice(self, interaction_result: Dict[str, float | bool | str]) -> float:
+        my_gain = float(interaction_result.get("my_gain", 0.0))
+        other_gain = float(interaction_result.get("other_gain", 0.0))
+        was_coerced = bool(interaction_result.get("coerced", False))
+        power_asymmetry = float(interaction_result.get("power_diff", 0.0))
+        denom = max(my_gain + other_gain, 1e-6)
+
+        outcome_fairness = 1.0 - abs(my_gain - other_gain) / denom
+        outcome_fairness *= self.latent.get("empathy", 0.5)
+
+        procedural_fairness = 1.0 - (1.0 if was_coerced else 0.0)
+        procedural_fairness *= self.latent.get("reasoning", 0.5)
+
+        selfish_gain = my_gain / denom
+        selfish_gain *= self.dark_core
+
+        dominance = self.latent.get("dominance", 0.5)
+        power_satisfaction = power_asymmetry if dominance > 0.5 else -power_asymmetry
+        power_satisfaction = (power_satisfaction + 1.0) / 2.0
+
+        justice_score = (
+            outcome_fairness * 0.3
+            + procedural_fairness * 0.3
+            + selfish_gain * 0.2
+            + power_satisfaction * 0.2
+        )
+        justice_score = clamp01(justice_score)
+        self.last_justice_score = justice_score
+        self.justice_perception_history.append(
+            {
+                "step": float(self.model.steps),
+                "score": justice_score,
+                "outcome_fairness": outcome_fairness,
+                "procedural_fairness": procedural_fairness,
+            }
+        )
+        return justice_score
+
+    def demand_norm_change(self, perceived_injustice: float, offender: "Citizen" | None = None, context: str | None = None):
+        if perceived_injustice <= self.justice_threshold:
+            return
+        self.model.log_event(
+            "JUSTICE_OUTRAGE",
+            {
+                "agent_id": self.unique_id,
+                "profile_id": getattr(self, "profile_id", ""),
+                "perceived_injustice": perceived_injustice,
+                "context": context or "",
+            },
+        )
+        if offender and self.model.coalition_enabled and self.model.rng.random() < clamp01(perceived_injustice):
+            self._form_punishment_alliance(offender)
 
     def get_status_score(self) -> float:
         wealth_term = math.log1p(max(self.wealth, 0.0) + 1.0)
@@ -353,14 +418,14 @@ class Citizen(Agent):
 
     def _start_gestation(self, father: "Citizen"):
         self.gestation_timer = max(8, int(abs(self.model.rng.normal(self.gestation_steps, 4))))
-        self.fertility_cooldown = max(1, int(abs(self.model.rng.normal(self.model.female_repro_cooldown, 3)))))
+        self.fertility_cooldown = max(1, int(abs(self.model.rng.normal(self.model.female_repro_cooldown, 3))))
         self.current_partner = father.unique_id
         self.mate_history.append(father.unique_id)
         father.mating_success += 1.0
-        father.reproduction_cooldown = max(1, int(abs(self.model.rng.normal(self.model.male_repro_cooldown, 2)))))
+        father.reproduction_cooldown = max(1, int(abs(self.model.rng.normal(self.model.male_repro_cooldown, 2))))
         if self.model.rng.random() < clamp01(self.dopamine):
             father.reproduction_cooldown = max(1, father.reproduction_cooldown - 1)
-        cooldown_f = max(1, int(abs(self.model.rng.normal(self.model.female_repro_cooldown, 3)))))
+        cooldown_f = max(1, int(abs(self.model.rng.normal(self.model.female_repro_cooldown, 3))))
         self.reproduction_cooldown = max(self.reproduction_cooldown, cooldown_f)
         self.model.step_events["mating_attempts"] += 1
 
@@ -708,6 +773,32 @@ class Citizen(Agent):
         entry["last_outcome"] = outcome
         entry["trust"] = clamp01(entry["trust"] + trust_delta)
 
+    def _register_justice_response(self, other: "Citizen", my_gain: float, other_gain: float, coerced: bool, context: str):
+        power_diff = self.latent.get("dominance", 0.5) - other.latent.get("dominance", 0.5)
+        power_diff = max(-1.0, min(1.0, power_diff))
+        justice_score = self.perceive_justice(
+            {
+                "my_gain": my_gain,
+                "other_gain": other_gain,
+                "coerced": coerced,
+                "power_diff": power_diff,
+                "context": context,
+            }
+        )
+        perceived_injustice = clamp01(1.0 - justice_score)
+        if justice_score <= 0.2 or justice_score >= 0.9:
+            self.model.log_event(
+                "JUSTICE_CRITICAL",
+                {
+                    "agent_id": self.unique_id,
+                    "other_id": other.unique_id,
+                    "profile_id": getattr(self, "profile_id", ""),
+                    "score": justice_score,
+                    "context": context,
+                },
+            )
+        self.demand_norm_change(perceived_injustice, offender=other, context=context)
+
     def interact(self):
         if not self.alive:
             return
@@ -750,6 +841,8 @@ class Citizen(Agent):
                     victim.wealth -= drag
                     self.model.total_wealth -= drag * 2
                     self.model.register_violence(attacker, victim)
+                    attacker._register_justice_response(victim, my_gain=-drag, other_gain=-drag, coerced=True, context="violence_special")
+                    victim._register_justice_response(attacker, my_gain=-drag, other_gain=-drag, coerced=True, context="violence_special")
                     continue
                 if special == "FAILED":
                     self._log_episode(attacker, victim, "violence_fail")
@@ -757,6 +850,8 @@ class Citizen(Agent):
                     attacker.wealth -= drag
                     self.model.total_wealth -= drag
                     self.model.register_violence(attacker, victim)
+                    attacker._register_justice_response(victim, my_gain=-drag, other_gain=0.0, coerced=True, context="violence_failed")
+                    victim._register_justice_response(attacker, my_gain=0.0, other_gain=-drag, coerced=True, context="violence_failed")
                     continue
                 gain = gauss_clip(self.model.rng, 0.8, 0.15) * (attacker.latent.get("dominance", 0.5) + gauss_clip(self.model.rng, 0.2, 0.05))
                 attacker.wealth += gain
@@ -779,6 +874,8 @@ class Citizen(Agent):
                 victim.nd_cost += 0.1
                 self.model.total_wealth -= 0.1
                 self._log_episode(attacker, victim, "violence")
+                attacker._register_justice_response(victim, my_gain=gain - cost, other_gain=-gain * 1.2, coerced=True, context="violence")
+                victim._register_justice_response(attacker, my_gain=-gain * 1.2, other_gain=gain - cost, coerced=True, context="violence")
                 continue
 
             if my_action == "coop" and other_action == "coop":
@@ -809,6 +906,8 @@ class Citizen(Agent):
                 self.reputation_coop = clamp01(self.reputation_coop + 0.06)
                 other.reputation_coop = clamp01(other.reputation_coop + 0.06)
                 self._log_episode(self, other, "coop")
+                self._register_justice_response(other, my_gain=bonus, other_gain=bonus, coerced=False, context="coop")
+                other._register_justice_response(self, my_gain=bonus, other_gain=bonus, coerced=False, context="coop")
             elif my_action == "support" or other_action == "support":
                 supporter = self if my_action == "support" else other
                 receiver = other if supporter is self else self
@@ -824,6 +923,8 @@ class Citizen(Agent):
                 supporter.latent["empathy"] = clamp01(supporter.latent.get("empathy", 0.5) + 0.02)
                 supporter.nd_contribution += dev
                 self._log_episode(supporter, receiver, "support")
+                supporter._register_justice_response(receiver, my_gain=0.05 * dev, other_gain=0.1 * dev, coerced=False, context="support")
+                receiver._register_justice_response(supporter, my_gain=0.1 * dev, other_gain=0.05 * dev, coerced=False, context="support")
             elif my_action == "coop" and other_action == "defect":
                 steal = 0.9
                 other.wealth += steal
@@ -837,6 +938,8 @@ class Citizen(Agent):
                 other.reputation_fear = clamp01(other.reputation_fear + 0.08)
                 other.reputation_coop = clamp01(other.reputation_coop - 0.10)
                 self._log_episode(other, self, "defect")
+                self._register_justice_response(other, my_gain=-steal, other_gain=steal, coerced=True, context="defect")
+                other._register_justice_response(self, my_gain=steal, other_gain=-steal, coerced=True, context="defect")
             elif my_action == "defect" and other_action == "coop":
                 steal = 0.9
                 self.wealth += steal
@@ -850,12 +953,16 @@ class Citizen(Agent):
                 self.reputation_fear = clamp01(self.reputation_fear + 0.08)
                 self.reputation_coop = clamp01(self.reputation_coop - 0.10)
                 self._log_episode(self, other, "defect")
+                self._register_justice_response(other, my_gain=steal, other_gain=-steal, coerced=True, context="defect")
+                other._register_justice_response(self, my_gain=-steal, other_gain=steal, coerced=True, context="defect")
             else:
                 self.happiness = clamp01(self.happiness - 0.02)
                 other.happiness = clamp01(other.happiness - 0.02)
                 self.update_memory(other, "defect", trust_delta=-0.02)
                 other.update_memory(self, "defect", trust_delta=-0.02)
                 self._log_episode(self, other, "standoff")
+                self._register_justice_response(other, my_gain=0.0, other_gain=0.0, coerced=False, context="standoff")
+                other._register_justice_response(self, my_gain=0.0, other_gain=0.0, coerced=False, context="standoff")
 
             # psicópata estratégico: simulación de empatía para reputación cooperativa
             if self.latent.get("reasoning", 0.5) > 0.8 and self.latent.get("empathy", 0.5) < 0.3:
@@ -1240,6 +1347,12 @@ class SocietyModel(Model):
         self.enable_coercion = bool(enable_coercion)
         self.births_total = 0
         self.step_events: Dict[str, float] = {}
+        self.steps = 0
+        self.event_log: List[Dict[str, object]] = []
+        self.emergent_norms: List[Dict[str, object]] = []
+        self.norm_precedents: Dict[str, List[Dict[str, object]]] = {}
+        self.metric_history: List[Dict[str, float]] = []
+        self.norm_detection_window = 50
 
         for _ in range(self.actual_agents):
             latent, bias_ranges, spectrum_ranges, profile_id = self._compose_latent(jitter=jitter)
@@ -1298,6 +1411,8 @@ class SocietyModel(Model):
                 "male_childless_share": lambda m: m.last_metrics.get("male_childless_share", 0.0),
                 "mean_partners_male": lambda m: m.last_metrics.get("mean_partners_male", 0.0),
                 "mean_partners_female": lambda m: m.last_metrics.get("mean_partners_female", 0.0),
+                "avg_justice_score": lambda m: m.last_metrics.get("avg_justice_score", 0.0),
+                "emergent_norms_count": lambda m: len(getattr(m, "emergent_norms", [])),
             }
         )
         self._update_metrics()
@@ -1386,6 +1501,24 @@ class SocietyModel(Model):
                 "members": members,
                 "rule": "prosocial" if np.mean([m.latent.get("empathy", 0.5) for m in members]) >= np.mean([m.latent.get("dominance", 0.5) for m in members]) else "dominance",
             }
+            self.log_event(
+                "COALITION_FORMED",
+                {
+                    "alliance_id": aid,
+                    "rule": alliances[aid]["rule"],
+                    "goal": alliances[aid]["goal"],
+                    "members": [m.unique_id for m in members],
+                },
+            )
+            self._record_norm_precedent(
+                "coalition_rule",
+                {
+                    "alliance_id": aid,
+                    "rule": alliances[aid]["rule"],
+                    "goal": alliances[aid]["goal"],
+                    "member_count": len(members),
+                },
+            )
             for m in members:
                 m.alliance_id = aid
                 if alliances[aid]["rule"] == "prosocial":
@@ -1431,6 +1564,59 @@ class SocietyModel(Model):
                     m.reputation_coop = clamp01(m.reputation_coop + boost)
                 # Prosocial coalitions reduce violence pressure proportionally
                 self.legal_formalism = clamp01(self.legal_formalism + 0.01 * reason)
+
+    def _record_norm_precedent(self, norm_type: str, payload: Dict[str, object]):
+        entry = {"step": self.steps, **payload}
+        self.norm_precedents.setdefault(norm_type, []).append(entry)
+        self.log_event("NORM_PRECEDENT", {"norm_type": norm_type, **payload})
+
+    def _agent_supports_norm(self, agent: Citizen, norm_type: str) -> bool:
+        if norm_type == "reciprocity":
+            return agent.reputation_coop >= 0.6 and agent.last_action == "coop"
+        if norm_type == "coercion":
+            return agent.reputation_fear >= 0.6 or agent.last_action == "violence"
+        return False
+
+    def _analyze_cognitive_basis(self, norm_type: str) -> Dict[str, float]:
+        supporters = [a for a in self.agents_alive() if self._agent_supports_norm(a, norm_type)]
+        if not supporters:
+            return {}
+        return {
+            "empathy": float(np.mean([a.latent.get("empathy", 0.5) for a in supporters])),
+            "reasoning": float(np.mean([a.latent.get("reasoning", 0.5) for a in supporters])),
+            "dominance": float(np.mean([a.latent.get("dominance", 0.5) for a in supporters])),
+            "dark_core": float(np.mean([a.dark_core for a in supporters])),
+        }
+
+    def detect_emergent_norms(self):
+        alive = self.agents_alive()
+        if not alive or len(self.metric_history) < self.norm_detection_window:
+            return
+        recent = self.metric_history[-self.norm_detection_window :]
+        avg_coop = float(np.mean([m.get("coop_rate", 0.0) for m in recent]))
+        avg_violence = float(np.mean([m.get("violence_rate", 0.0) for m in recent]))
+        ratio_alive = max(1, len(alive))
+
+        if avg_coop >= 0.8:
+            if not any(n.get("type") == "reciprocity" for n in self.emergent_norms):
+                norm_entry = {
+                    "type": "reciprocity",
+                    "step_emerged": self.steps,
+                    "enforcement_rate": sum(1 for a in alive if self._agent_supports_norm(a, "reciprocity")) / ratio_alive,
+                    "cognitive_basis": self._analyze_cognitive_basis("reciprocity"),
+                }
+                self.emergent_norms.append(norm_entry)
+                self.log_event("NORM_EMERGENCE", norm_entry)
+        if avg_violence >= 0.3:
+            if not any(n.get("type") == "coercion" for n in self.emergent_norms):
+                norm_entry = {
+                    "type": "coercion",
+                    "step_emerged": self.steps,
+                    "enforcement_rate": sum(1 for a in alive if self._agent_supports_norm(a, "coercion")) / ratio_alive,
+                    "cognitive_basis": self._analyze_cognitive_basis("coercion"),
+                }
+                self.emergent_norms.append(norm_entry)
+                self.log_event("NORM_EMERGENCE", norm_entry)
 
     def _compose_latent(self, jitter: float = 0.05):
         traits = {
@@ -1629,15 +1815,16 @@ class SocietyModel(Model):
                 "coalition_count": 0.0,
                 "coalition_wins": 0.0,
                 "sneaky_success_rate": 0.0,
-            "male_male_conflicts": 0.0,
-            "female_indirect_competition": 0.0,
-            "mating_inequality": 0.0,
-            "mean_harem_size": 0.0,
-            "repro_gini_males": 0.0,
-            "male_childless_share": 0.0,
-            "mean_partners_male": 0.0,
-            "mean_partners_female": 0.0,
-        }
+                "male_male_conflicts": 0.0,
+                "female_indirect_competition": 0.0,
+                "mating_inequality": 0.0,
+                "mean_harem_size": 0.0,
+                "repro_gini_males": 0.0,
+                "male_childless_share": 0.0,
+                "mean_partners_male": 0.0,
+                "mean_partners_female": 0.0,
+                "avg_justice_score": 0.0,
+            }
             self.running = False
             return
 
@@ -1664,6 +1851,7 @@ class SocietyModel(Model):
         male_childless_share = male_childless / max(1, len(male_children)) if male_children else 0.0
         mean_partners_male = float(np.mean([len(a.mates_lifetime) for a in alive if a.gender == "Male"])) if male_count else 0.0
         mean_partners_female = float(np.mean([len(a.mates_lifetime) for a in alive if a.gender == "Female"])) if female_count else 0.0
+        avg_justice_score = float(np.mean([a.last_justice_score for a in alive])) if alive else 0.0
 
         self.last_metrics = {
             "coop_rate": coop / pop,
@@ -1691,7 +1879,11 @@ class SocietyModel(Model):
             "male_childless_share": male_childless_share,
             "mean_partners_male": mean_partners_male,
             "mean_partners_female": mean_partners_female,
+            "avg_justice_score": avg_justice_score,
         }
+        self.metric_history.append(dict(self.last_metrics))
+        if len(self.metric_history) > max(200, self.norm_detection_window * 2):
+            self.metric_history = self.metric_history[-max(200, self.norm_detection_window * 2) :]
 
         self.legal_formalism = clamp01(top_mean_leader * (1 + 0.3 * self.institution_pressure))
         self.liberty_index = clamp01(0.6 * avg_empathy + 0.2 * (1 - avg_dom))
@@ -1704,6 +1896,7 @@ class SocietyModel(Model):
 
     def step(self):
         self._reset_step_events()
+        self.steps += 1
         self.agents.shuffle_do("step")
         # economic growth from high reasoning prosocial agents
         for a in self.agents_alive():
@@ -1716,6 +1909,7 @@ class SocietyModel(Model):
             self.legal_formalism = clamp01(self.legal_formalism + 0.05)
         self._update_alliances()
         self._update_metrics()
+        self.detect_emergent_norms()
         self.total_wealth = sum(agent.wealth for agent in self.agents_alive())
         self.datacollector.collect(self)
         if not self.agents_alive():
@@ -1729,9 +1923,7 @@ class SocietyModel(Model):
             ally.wealth += share
 
     def log_event(self, tag: str, payload: object):
-        if not hasattr(self, "event_log"):
-            self.event_log = []
-        self.event_log.append((tag, payload))
+        self.event_log.append({"step": self.steps, "tag": tag, "payload": payload})
 
     def register_violence(self, attacker: Citizen, victim: Citizen):
         self.recent_violence_events.append((attacker.unique_id, victim.unique_id))
