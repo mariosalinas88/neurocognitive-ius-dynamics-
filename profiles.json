@@ -1,0 +1,3003 @@
+﻿{
+    "profiles":  [
+                     {
+                         "id":  1,
+                         "name":  "NeurotÃ­pico Neutro",
+                         "type":  "control",
+                         "description":  "Perfil balanceado ICD-11, hardware neuronal promedio sin carga moral explÃ­cita.",
+                         "latents":  {
+                                         "attn_selective":  0.55,
+                                         "attn_flex":  0.55,
+                                         "hyperfocus":  0.50,
+                                         "impulsivity":  0.50,
+                                         "risk_aversion":  0.55,
+                                         "sociality":  0.60,
+                                         "language":  0.60,
+                                         "reasoning":  0.50,
+                                         "emotional_impulsivity":  0.50,
+                                         "resilience":  0.60
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.45,
+                                                                 0.65
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.35,
+                                                                   0.55
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.45,
+                                                                    0.65
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.25,
+                                                                    0.50
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.45,
+                                                                         0.65
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.45,
+                                                                           0.65
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.45,
+                                                                       0.65
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.25,
+                                                                     0.45
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.20,
+                                                                   0.35
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.20,
+                                                                   0.35
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.15,
+                                                                     0.30
+                                                                 ]
+                                             },
+                         "spectrum_ranges":  {
+
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  2,
+                         "name":  "Eliza TDAH Neutro",
+                         "type":  "neurodesarrollo",
+                         "description":  "WISC-V: alta impulsividad y variabilidad ejecutiva; razonamiento alto, regulaciÃ³n baja.",
+                         "latents":  {
+                                         "attn_selective":  0.35,
+                                         "attn_flex":  0.65,
+                                         "hyperfocus":  0.30,
+                                         "impulsivity":  0.75,
+                                         "risk_aversion":  0.30,
+                                         "sociality":  0.85,
+                                         "language":  0.80,
+                                         "reasoning":  0.88,
+                                         "emotional_impulsivity":  0.70,
+                                         "resilience":  0.40
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.45,
+                                                                 0.75
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.35,
+                                                                   0.60
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.30,
+                                                                    0.50
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.30,
+                                                                    0.60
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.45,
+                                                                         0.65
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.40,
+                                                                           0.60
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.40,
+                                                                       0.60
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.25,
+                                                                     0.50
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.20,
+                                                                   0.40
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.20,
+                                                                   0.35
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.15,
+                                                                     0.35
+                                                                 ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "impulsivity":  [
+                                                                     0.60,
+                                                                     0.90
+                                                                 ],
+                                                 "emotional_impulsivity":  [
+                                                                               0.60,
+                                                                               0.90
+                                                                           ]
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  3,
+                         "name":  "Autismo Neutro",
+                         "type":  "neurodivergente",
+                         "description":  "ICD-11/Princeton: alto detalle y razonamiento, baja motivaciÃ³n social.",
+                         "latents":  {
+                                         "attn_selective":  0.95,
+                                         "attn_flex":  0.20,
+                                         "hyperfocus":  0.98,
+                                         "impulsivity":  0.30,
+                                         "risk_aversion":  0.70,
+                                         "sociality":  0.30,
+                                         "language":  0.70,
+                                         "reasoning":  0.95,
+                                         "emotional_impulsivity":  0.60,
+                                         "resilience":  0.50
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.30,
+                                                                 0.70
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.25,
+                                                                   0.50
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.55,
+                                                                    0.80
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.15,
+                                                                    0.40
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.45,
+                                                                         0.70
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.45,
+                                                                           0.70
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.50,
+                                                                       0.75
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.15,
+                                                                     0.40
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.15,
+                                                                   0.30
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.15,
+                                                                   0.30
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.10,
+                                                                     0.25
+                                                                 ],
+                                                 "reasoning":  [
+                                                                   0.80,
+                                                                   1.00
+                                                               ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "hyperfocus":  [
+                                                                    0.80,
+                                                                    1.00
+                                                                ],
+                                                 "sociality":  [
+                                                                   0.10,
+                                                                   0.50
+                                                               ],
+                                                 "language":  [
+                                                                  0.50,
+                                                                  0.80
+                                                              ],
+                                                 "emotional_impulsivity":  [
+                                                                               0.40,
+                                                                               0.70
+                                                                           ]
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  4,
+                         "name":  "Dislexia Neutra",
+                         "type":  "neurodesarrollo",
+                         "description":  "DSM-5: lenguaje bajo, razonamiento compensatorio.",
+                         "latents":  {
+                                         "attn_selective":  0.50,
+                                         "attn_flex":  0.50,
+                                         "hyperfocus":  0.60,
+                                         "impulsivity":  0.45,
+                                         "risk_aversion":  0.50,
+                                         "sociality":  0.55,
+                                         "language":  0.40,
+                                         "reasoning":  0.70,
+                                         "emotional_impulsivity":  0.50,
+                                         "resilience":  0.55
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.45,
+                                                                 0.65
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.35,
+                                                                   0.55
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.45,
+                                                                    0.65
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.25,
+                                                                    0.45
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.45,
+                                                                         0.65
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.45,
+                                                                           0.65
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.45,
+                                                                       0.65
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.25,
+                                                                     0.45
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.20,
+                                                                   0.35
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.20,
+                                                                   0.35
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.15,
+                                                                     0.30
+                                                                 ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "language":  [
+                                                                  0.30,
+                                                                  0.55
+                                                              ]
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  5,
+                         "name":  "OCD Leve Neutra",
+                         "type":  "ansiedad",
+                         "description":  "DSM-5: hiperfoco y rigidez elevados, regulaciÃ³n alta.",
+                         "latents":  {
+                                         "attn_selective":  0.80,
+                                         "attn_flex":  0.30,
+                                         "hyperfocus":  0.90,
+                                         "impulsivity":  0.30,
+                                         "risk_aversion":  0.80,
+                                         "sociality":  0.40,
+                                         "language":  0.65,
+                                         "reasoning":  0.70,
+                                         "emotional_impulsivity":  0.40,
+                                         "resilience":  0.70
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.40,
+                                                                 0.60
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.35,
+                                                                   0.55
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.70,
+                                                                    0.90
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.10,
+                                                                    0.30
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.45,
+                                                                         0.65
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.45,
+                                                                           0.65
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.55,
+                                                                       0.75
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.15,
+                                                                     0.35
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.15,
+                                                                   0.30
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.15,
+                                                                   0.30
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.10,
+                                                                     0.25
+                                                                 ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "hyperfocus":  [
+                                                                    0.80,
+                                                                    1.00
+                                                                ],
+                                                 "affect_reg":  [
+                                                                    0.70,
+                                                                    0.95
+                                                                ]
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  6,
+                         "name":  "HSP Neutra",
+                         "type":  "sensibilidad",
+                         "description":  "Alta sensibilidad/emocionalidad, socialidad elevada.",
+                         "latents":  {
+                                         "attn_selective":  0.55,
+                                         "attn_flex":  0.60,
+                                         "hyperfocus":  0.55,
+                                         "impulsivity":  0.55,
+                                         "risk_aversion":  0.75,
+                                         "sociality":  0.70,
+                                         "language":  0.70,
+                                         "reasoning":  0.65,
+                                         "emotional_impulsivity":  0.80,
+                                         "resilience":  0.40
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.65,
+                                                                 0.85
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.30,
+                                                                   0.50
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.35,
+                                                                    0.55
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.15,
+                                                                    0.40
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.65,
+                                                                         0.85
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.60,
+                                                                           0.80
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.55,
+                                                                       0.75
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.15,
+                                                                     0.35
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.15,
+                                                                   0.30
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.15,
+                                                                   0.30
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.10,
+                                                                     0.25
+                                                                 ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "emotional_impulsivity":  [
+                                                                               0.70,
+                                                                               0.95
+                                                                           ]
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  7,
+                         "name":  "Bipolar Leve Neutra",
+                         "type":  "animo",
+                         "description":  "DSM-5: impulsividad y emocionalidad elevadas, resiliencia baja.",
+                         "latents":  {
+                                         "attn_selective":  0.55,
+                                         "attn_flex":  0.60,
+                                         "hyperfocus":  0.55,
+                                         "impulsivity":  0.65,
+                                         "risk_aversion":  0.45,
+                                         "sociality":  0.65,
+                                         "language":  0.70,
+                                         "reasoning":  0.65,
+                                         "emotional_impulsivity":  0.75,
+                                         "resilience":  0.35
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.45,
+                                                                 0.70
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.40,
+                                                                   0.60
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.30,
+                                                                    0.55
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.30,
+                                                                    0.60
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.45,
+                                                                         0.65
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.45,
+                                                                           0.65
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.40,
+                                                                       0.60
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.25,
+                                                                     0.50
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.20,
+                                                                   0.40
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.20,
+                                                                   0.40
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.15,
+                                                                     0.35
+                                                                 ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "emotional_impulsivity":  [
+                                                                               0.65,
+                                                                               0.95
+                                                                           ],
+                                                 "impulsivity":  [
+                                                                     0.55,
+                                                                     0.85
+                                                                 ]
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  8,
+                         "name":  "Esquizofrenia Leve Neutra",
+                         "type":  "psicosis",
+                         "description":  "Espectro 2025: razonamiento creativo alto, atenciÃ³n baja.",
+                         "latents":  {
+                                         "attn_selective":  0.40,
+                                         "attn_flex":  0.50,
+                                         "hyperfocus":  0.55,
+                                         "impulsivity":  0.45,
+                                         "risk_aversion":  0.55,
+                                         "sociality":  0.35,
+                                         "language":  0.55,
+                                         "reasoning":  0.80,
+                                         "emotional_impulsivity":  0.65,
+                                         "resilience":  0.45
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.35,
+                                                                 0.60
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.30,
+                                                                   0.50
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.35,
+                                                                    0.55
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.20,
+                                                                    0.45
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.40,
+                                                                         0.60
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.40,
+                                                                           0.60
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.40,
+                                                                       0.60
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.20,
+                                                                     0.45
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.20,
+                                                                   0.35
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.20,
+                                                                   0.35
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.15,
+                                                                     0.30
+                                                                 ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "reasoning":  [
+                                                                   0.70,
+                                                                   0.90
+                                                               ],
+                                                 "attn_selective":  [
+                                                                        0.30,
+                                                                        0.55
+                                                                    ],
+                                                 "emotional_impulsivity":  [
+                                                                               0.50,
+                                                                               0.80
+                                                                           ]
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  9,
+                         "name":  "Alta EmpatÃ­a Neutra",
+                         "type":  "prosocial",
+                         "description":  "Estudios de empatÃ­a: sociabilidad y sensibilidad elevadas.",
+                         "latents":  {
+                                         "attn_selective":  0.55,
+                                         "attn_flex":  0.60,
+                                         "hyperfocus":  0.50,
+                                         "impulsivity":  0.45,
+                                         "risk_aversion":  0.50,
+                                         "sociality":  0.90,
+                                         "language":  0.80,
+                                         "reasoning":  0.70,
+                                         "emotional_impulsivity":  0.80,
+                                         "resilience":  0.60
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.70,
+                                                                 0.90
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.30,
+                                                                   0.50
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.50,
+                                                                    0.70
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.10,
+                                                                    0.30
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.70,
+                                                                         0.90
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.65,
+                                                                           0.85
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.60,
+                                                                       0.80
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.10,
+                                                                     0.30
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.10,
+                                                                   0.25
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.10,
+                                                                   0.25
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.05,
+                                                                     0.20
+                                                                 ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "empathy":  [
+                                                                 0.70,
+                                                                 0.95
+                                                             ],
+                                                 "emotional_impulsivity":  [
+                                                                               0.65,
+                                                                               0.90
+                                                                           ],
+                                                 "sociality":  [
+                                                                   0.75,
+                                                                   0.95
+                                                               ]
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  10,
+                         "name":  "Dark PredisposiciÃ³n BiolÃ³gica Neutra",
+                         "type":  "oscuro",
+                         "description":  "DSM-5/ICD-11: impulsividad y rasgos oscuros altos de base.",
+                         "latents":  {
+                                         "attn_selective":  0.55,
+                                         "attn_flex":  0.55,
+                                         "hyperfocus":  0.55,
+                                         "impulsivity":  0.70,
+                                         "risk_aversion":  0.35,
+                                         "sociality":  0.55,
+                                         "language":  0.65,
+                                         "reasoning":  0.70,
+                                         "emotional_impulsivity":  0.70,
+                                         "resilience":  0.40
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.25,
+                                                                 0.50
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.60,
+                                                                   0.85
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.30,
+                                                                    0.55
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.45,
+                                                                    0.75
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.25,
+                                                                         0.50
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.25,
+                                                                           0.50
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.25,
+                                                                       0.50
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.45,
+                                                                     0.75
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.40,
+                                                                   0.70
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.40,
+                                                                   0.70
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.35,
+                                                                     0.65
+                                                                 ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "impulsivity":  [
+                                                                     0.60,
+                                                                     0.90
+                                                                 ],
+                                                 "emotional_impulsivity":  [
+                                                                               0.60,
+                                                                               0.90
+                                                                           ]
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  11,
+                         "name":  "Alta Capacidad Intelectual Neutra",
+                         "type":  "altas-capacidades",
+                         "description":  "Alto IQ estudios 2025: razonamiento y flexibilidad altos.",
+                         "latents":  {
+                                         "attn_selective":  0.75,
+                                         "attn_flex":  0.80,
+                                         "hyperfocus":  0.70,
+                                         "impulsivity":  0.45,
+                                         "risk_aversion":  0.45,
+                                         "sociality":  0.65,
+                                         "language":  0.85,
+                                         "reasoning":  0.95,
+                                         "emotional_impulsivity":  0.50,
+                                         "resilience":  0.65
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.40,
+                                                                 0.80
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.40,
+                                                                   0.60
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.50,
+                                                                    0.75
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.20,
+                                                                    0.45
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.50,
+                                                                         0.75
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.50,
+                                                                           0.75
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.50,
+                                                                       0.80
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.20,
+                                                                     0.40
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.20,
+                                                                   0.35
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.20,
+                                                                   0.35
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.15,
+                                                                     0.30
+                                                                 ],
+                                                 "reasoning":  [
+                                                                   0.80,
+                                                                   1.00
+                                                               ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "reasoning":  [
+                                                                   0.85,
+                                                                   1.00
+                                                               ],
+                                                 "attn_flex":  [
+                                                                   0.70,
+                                                                   0.95
+                                                               ]
+                                             },
+                         "gauss_std":  0.15
+                     },
+                     {
+                         "id":  12,
+                         "name":  "DepresiÃ³n Leve Neutra",
+                         "type":  "animo",
+                         "description":  "Estudios de depresiÃ³n: alta aversiÃ³n al riesgo y resiliencia baja.",
+                         "latents":  {
+                                         "attn_selective":  0.50,
+                                         "attn_flex":  0.45,
+                                         "hyperfocus":  0.45,
+                                         "impulsivity":  0.40,
+                                         "risk_aversion":  0.70,
+                                         "sociality":  0.35,
+                                         "language":  0.60,
+                                         "reasoning":  0.60,
+                                         "emotional_impulsivity":  0.60,
+                                         "resilience":  0.30
+                                     },
+                         "biological_bias":  {
+                                                 "empathy":  [
+                                                                 0.45,
+                                                                 0.70
+                                                             ],
+                                                 "dominance":  [
+                                                                   0.25,
+                                                                   0.45
+                                                               ],
+                                                 "affect_reg":  [
+                                                                    0.30,
+                                                                    0.55
+                                                                ],
+                                                 "aggression":  [
+                                                                    0.20,
+                                                                    0.45
+                                                                ],
+                                                 "moral_prosocial":  [
+                                                                         0.45,
+                                                                         0.65
+                                                                     ],
+                                                 "moral_common_good":  [
+                                                                           0.45,
+                                                                           0.65
+                                                                       ],
+                                                 "moral_honesty":  [
+                                                                       0.45,
+                                                                       0.65
+                                                                   ],
+                                                 "moral_spite":  [
+                                                                     0.20,
+                                                                     0.45
+                                                                 ],
+                                                 "dark_narc":  [
+                                                                   0.15,
+                                                                   0.30
+                                                               ],
+                                                 "dark_mach":  [
+                                                                   0.15,
+                                                                   0.30
+                                                               ],
+                                                 "dark_psycho":  [
+                                                                     0.10,
+                                                                     0.25
+                                                                 ]
+                                             },
+                         "spectrum_ranges":  {
+                                                 "emotional_impulsivity":  [
+                                                                               0.50,
+                                                                               0.80
+                                                                           ],
+                                                 "resilience":  [
+                                                                    0.20,
+                                                                    0.40
+                                                                ]
+                                             },
+                         "gauss_std":  0.15
+                     }
+                 ],
+    "rare_variants": [
+        {
+            "id": "chaman_logico",
+            "name": "Chamán Lógico",
+            "description": "Chamán racional con patrones leibnizianos; visiones estructuradas, formalismo imaginativo.",
+            "probability": 0.08,
+            "trait_mods": {
+                "hyperfocus": 0.4,
+                "sociality": -0.3,
+                "language": 0.1,
+                "reasoning": 0.1
+            },
+            "imagination_boost": 0.4,
+            "narrative": "leibnizian_patterns"
+        },
+        {
+            "id": "irracional_infinito",
+            "name": "Irracional Infinito",
+            "description": "Explorador caótico; impulsa innovación disruptiva y lecturas emotivas.",
+            "probability": 0.07,
+            "trait_mods": {
+                "impulsivity": 0.3,
+                "reasoning": -0.2,
+                "emotional_impulsivity": 0.2
+            },
+            "chaos_innovation": 0.4,
+            "narrative": "chaotic_innovator"
+        }, [
+  {
+    "id": 13,
+    "name": "Teóricos",
+    "type": "cientifico",
+    "description": "Individuos con corteza prefrontal hiperdesarrollada, alta densidad de conexiones de largo alcance, dopamina basal alta en circuitos de predicción abstracta. Generan hipótesis radicales y modelos matemáticos.",
+    "latents": {
+      "attn_selective": 0.70,
+      "attn_flex": 0.80,
+      "hyperfocus": 0.75,
+      "impulsivity": 0.40,
+      "risk_aversion": 0.30,
+      "sociality": 0.50,
+      "language": 0.85,
+      "reasoning": 0.90,
+      "emotional_impulsivity": 0.50,
+      "resilience": 0.60
+    },
+    "biological_bias": {
+      "empathy": [0.40, 0.60],
+      "dominance": [0.30, 0.50],
+      "affect_reg": [0.50, 0.70],
+      "aggression": [0.20, 0.40],
+      "moral_prosocial": [0.50, 0.70],
+      "moral_common_good": [0.50, 0.70],
+      "moral_honesty": [0.60, 0.80],
+      "moral_spite": [0.20, 0.40],
+      "dark_narc": [0.15, 0.30],
+      "dark_mach": [0.15, 0.30],
+      "dark_psycho": [0.10, 0.25]
+    },
+    "spectrum_ranges": {
+      "reasoning": [0.80, 1.00],
+      "language": [0.75, 0.95]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 14,
+    "name": "Experimentadores",
+    "type": "cientifico",
+    "description": "Individuos con hipocampo y striatum hiperplásicos, tolerancia extrema a la incertidumbre, recompensa dopaminérgica por datos novedosos. Diseñan y ejecutan experimentos arriesgados.",
+    "latents": {
+      "attn_selective": 0.60,
+      "attn_flex": 0.70,
+      "hyperfocus": 0.80,
+      "impulsivity": 0.75,
+      "risk_aversion": 0.20,
+      "sociality": 0.60,
+      "language": 0.70,
+      "reasoning": 0.75,
+      "emotional_impulsivity": 0.70,
+      "resilience": 0.70
+    },
+    "biological_bias": {
+      "empathy": [0.45, 0.65],
+      "dominance": [0.40, 0.60],
+      "affect_reg": [0.40, 0.60],
+      "aggression": [0.30, 0.50],
+      "moral_prosocial": [0.50, 0.70],
+      "moral_common_good": [0.45, 0.65],
+      "moral_honesty": [0.50, 0.70],
+      "moral_spite": [0.25, 0.45],
+      "dark_narc": [0.20, 0.35],
+      "dark_mach": [0.20, 0.35],
+      "dark_psycho": [0.15, 0.30]
+    },
+    "spectrum_ranges": {
+      "impulsivity": [0.65, 0.85],
+      "hyperfocus": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 15,
+    "name": "Refutadores",
+    "type": "cientifico",
+    "description": "Individuos con amígdala y cíngulo anterior sensibles a inconsistencias, placer intenso al encontrar errores. Actúan como sistema inmune cognitivo, refutando hipótesis débiles.",
+    "latents": {
+      "attn_selective": 0.80,
+      "attn_flex": 0.60,
+      "hyperfocus": 0.70,
+      "impulsivity": 0.40,
+      "risk_aversion": 0.60,
+      "sociality": 0.50,
+      "language": 0.75,
+      "reasoning": 0.85,
+      "emotional_impulsivity": 0.40,
+      "resilience": 0.75
+    },
+    "biological_bias": {
+      "empathy": [0.35, 0.55],
+      "dominance": [0.30, 0.50],
+      "affect_reg": [0.50, 0.70],
+      "aggression": [0.20, 0.40],
+      "moral_prosocial": [0.40, 0.60],
+      "moral_common_good": [0.50, 0.70],
+      "moral_honesty": [0.70, 0.90],
+      "moral_spite": [0.15, 0.35],
+      "dark_narc": [0.10, 0.25],
+      "dark_mach": [0.15, 0.30],
+      "dark_psycho": [0.10, 0.25]
+    },
+    "spectrum_ranges": {
+      "reasoning": [0.75, 0.95],
+      "attn_selective": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 16,
+    "name": "Sintetizadores",
+    "type": "cientifico",
+    "description": "Individuos con memoria de trabajo gigantesca, conexiones ultra-densas entre áreas de almacenamiento. Integran resultados y preservan conocimiento como archivos vivientes.",
+    "latents": {
+      "attn_selective": 0.75,
+      "attn_flex": 0.75,
+      "hyperfocus": 0.60,
+      "impulsivity": 0.30,
+      "risk_aversion": 0.50,
+      "sociality": 0.70,
+      "language": 0.80,
+      "reasoning": 0.80,
+      "emotional_impulsivity": 0.40,
+      "resilience": 0.80
+    },
+    "biological_bias": {
+      "empathy": [0.50, 0.70],
+      "dominance": [0.25, 0.45],
+      "affect_reg": [0.55, 0.75],
+      "aggression": [0.15, 0.35],
+      "moral_prosocial": [0.60, 0.80],
+      "moral_common_good": [0.55, 0.75],
+      "moral_honesty": [0.60, 0.80],
+      "moral_spite": [0.15, 0.35],
+      "dark_narc": [0.10, 0.25],
+      "dark_mach": [0.10, 0.25],
+      "dark_psycho": [0.05, 0.20]
+    },
+    "spectrum_ranges": {
+      "resilience": [0.70, 0.90],
+      "language": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 17,
+    "name": "Ingenieros",
+    "type": "cientifico",
+    "description": "Individuos con circuitos parietales y motores optimizados para optimización incremental, recompensa por eficiencia y robustez. Convierten descubrimientos en tecnologías fiables.",
+    "latents": {
+      "attn_selective": 0.70,
+      "attn_flex": 0.65,
+      "hyperfocus": 0.80,
+      "impulsivity": 0.35,
+      "risk_aversion": 0.55,
+      "sociality": 0.65,
+      "language": 0.70,
+      "reasoning": 0.80,
+      "emotional_impulsivity": 0.35,
+      "resilience": 0.85
+    },
+    "biological_bias": {
+      "empathy": [0.40, 0.60],
+      "dominance": [0.35, 0.55],
+      "affect_reg": [0.50, 0.70],
+      "aggression": [0.20, 0.40],
+      "moral_prosocial": [0.50, 0.70],
+      "moral_common_good": [0.60, 0.80],
+      "moral_honesty": [0.50, 0.70],
+      "moral_spite": [0.20, 0.40],
+      "dark_narc": [0.15, 0.30],
+      "dark_mach": [0.20, 0.35],
+      "dark_psycho": [0.10, 0.25]
+    },
+    "spectrum_ranges": {
+      "resilience": [0.75, 0.95],
+      "hyperfocus": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 18,
+    "name": "Guardianes",
+    "type": "cientifico",
+    "description": "Individuos con alta aversión a la pérdida, sistema serotoninérgico que castiga el riesgo colectivo, empatía de grupo extrema. Frenan experimentos peligrosos para la supervivencia.",
+    "latents": {
+      "attn_selective": 0.75,
+      "attn_flex": 0.55,
+      "hyperfocus": 0.60,
+      "impulsivity": 0.25,
+      "risk_aversion": 0.80,
+      "sociality": 0.80,
+      "language": 0.70,
+      "reasoning": 0.75,
+      "emotional_impulsivity": 0.30,
+      "resilience": 0.90
+    },
+    "biological_bias": {
+      "empathy": [0.60, 0.80],
+      "dominance": [0.30, 0.50],
+      "affect_reg": [0.60, 0.80],
+      "aggression": [0.15, 0.35],
+      "moral_prosocial": [0.70, 0.90],
+      "moral_common_good": [0.70, 0.90],
+      "moral_honesty": [0.60, 0.80],
+      "moral_spite": [0.10, 0.30],
+      "dark_narc": [0.05, 0.20],
+      "dark_mach": [0.10, 0.25],
+      "dark_psycho": [0.05, 0.20]
+    },
+    "spectrum_ranges": {
+      "risk_aversion": [0.70, 0.90],
+      "empathy": [0.65, 0.85]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 19,
+    "name": "Mutantes",
+    "type": "cientifico",
+    "description": "Individuos con tasa de mutación epigenética y neuronal mayor, plasticidad sináptica descontrolada. Generan saltos cognitivos impredecibles para revoluciones.",
+    "latents": {
+      "attn_selective": 0.50,
+      "attn_flex": 0.85,
+      "hyperfocus": 0.70,
+      "impulsivity": 0.80,
+      "risk_aversion": 0.20,
+      "sociality": 0.40,
+      "language": 0.65,
+      "reasoning": 0.70,
+      "emotional_impulsivity": 0.75,
+      "resilience": 0.65
+    },
+    "biological_bias": {
+      "empathy": [0.30, 0.50],
+      "dominance": [0.40, 0.60],
+      "affect_reg": [0.30, 0.50],
+      "aggression": [0.30, 0.50],
+      "moral_prosocial": [0.40, 0.60],
+      "moral_common_good": [0.40, 0.60],
+      "moral_honesty": [0.40, 0.60],
+      "moral_spite": [0.30, 0.50],
+      "dark_narc": [0.25, 0.45],
+      "dark_mach": [0.25, 0.45],
+      "dark_psycho": [0.20, 0.40]
+    },
+    "spectrum_ranges": {
+      "impulsivity": [0.70, 0.90],
+      "attn_flex": [0.75, 0.95]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 20,
+    "name": "Dogmáticos",
+    "type": "cientifico_opuesto",
+    "description": "Opuesto a Teóricos: Baja capacidad para hipótesis abstractas, alta rigidez cognitiva, recompensa por certeza dogmática en lugar de exploración.",
+    "latents": {
+      "attn_selective": 0.40,
+      "attn_flex": 0.30,
+      "hyperfocus": 0.35,
+      "impulsivity": 0.70,
+      "risk_aversion": 0.80,
+      "sociality": 0.60,
+      "language": 0.50,
+      "reasoning": 0.40,
+      "emotional_impulsivity": 0.60,
+      "resilience": 0.50
+    },
+    "biological_bias": {
+      "empathy": [0.30, 0.50],
+      "dominance": [0.50, 0.70],
+      "affect_reg": [0.30, 0.50],
+      "aggression": [0.40, 0.60],
+      "moral_prosocial": [0.30, 0.50],
+      "moral_common_good": [0.30, 0.50],
+      "moral_honesty": [0.30, 0.50],
+      "moral_spite": [0.40, 0.60],
+      "dark_narc": [0.30, 0.50],
+      "dark_mach": [0.30, 0.50],
+      "dark_psycho": [0.25, 0.45]
+    },
+    "spectrum_ranges": {
+      "reasoning": [0.20, 0.40],
+      "risk_aversion": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 21,
+    "name": "Conservadores Inertes",
+    "type": "cientifico_opuesto",
+    "description": "Opuesto a Experimentadores: Baja tolerancia a la incertidumbre, recompensa por estabilidad en lugar de novedad, evitación de riesgos experimentales.",
+    "latents": {
+      "attn_selective": 0.50,
+      "attn_flex": 0.40,
+      "hyperfocus": 0.30,
+      "impulsivity": 0.25,
+      "risk_aversion": 0.80,
+      "sociality": 0.50,
+      "language": 0.60,
+      "reasoning": 0.50,
+      "emotional_impulsivity": 0.30,
+      "resilience": 0.50
+    },
+    "biological_bias": {
+      "empathy": [0.35, 0.55],
+      "dominance": [0.30, 0.50],
+      "affect_reg": [0.50, 0.70],
+      "aggression": [0.20, 0.40],
+      "moral_prosocial": [0.40, 0.60],
+      "moral_common_good": [0.35, 0.55],
+      "moral_honesty": [0.40, 0.60],
+      "moral_spite": [0.30, 0.50],
+      "dark_narc": [0.25, 0.45],
+      "dark_mach": [0.25, 0.45],
+      "dark_psycho": [0.20, 0.40]
+    },
+    "spectrum_ranges": {
+      "risk_aversion": [0.70, 0.90],
+      "impulsivity": [0.10, 0.30]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 22,
+    "name": "Credulos",
+    "type": "cientifico_opuesto",
+    "description": "Opuesto a Refutadores: Baja sensibilidad a inconsistencias, placer por aceptación acrítica en lugar de refutación, tolerancia a errores.",
+    "latents": {
+      "attn_selective": 0.40,
+      "attn_flex": 0.50,
+      "hyperfocus": 0.40,
+      "impulsivity": 0.70,
+      "risk_aversion": 0.40,
+      "sociality": 0.60,
+      "language": 0.60,
+      "reasoning": 0.45,
+      "emotional_impulsivity": 0.60,
+      "resilience": 0.50
+    },
+    "biological_bias": {
+      "empathy": [0.50, 0.70],
+      "dominance": [0.40, 0.60],
+      "affect_reg": [0.40, 0.60],
+      "aggression": [0.30, 0.50],
+      "moral_prosocial": [0.50, 0.70],
+      "moral_common_good": [0.40, 0.60],
+      "moral_honesty": [0.30, 0.50],
+      "moral_spite": [0.30, 0.50],
+      "dark_narc": [0.20, 0.40],
+      "dark_mach": [0.25, 0.45],
+      "dark_psycho": [0.20, 0.40]
+    },
+    "spectrum_ranges": {
+      "reasoning": [0.30, 0.50],
+      "attn_selective": [0.30, 0.50]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 23,
+    "name": "Olvidadizos",
+    "type": "cientifico_opuesto",
+    "description": "Opuesto a Sintetizadores: Memoria de trabajo limitada, conexiones dispersas, dificultad para integrar y preservar conocimiento.",
+    "latents": {
+      "attn_selective": 0.40,
+      "attn_flex": 0.40,
+      "hyperfocus": 0.40,
+      "impulsivity": 0.60,
+      "risk_aversion": 0.60,
+      "sociality": 0.40,
+      "language": 0.50,
+      "reasoning": 0.50,
+      "emotional_impulsivity": 0.60,
+      "resilience": 0.40
+    },
+    "biological_bias": {
+      "empathy": [0.30, 0.50],
+      "dominance": [0.40, 0.60],
+      "affect_reg": [0.30, 0.50],
+      "aggression": [0.30, 0.50],
+      "moral_prosocial": [0.30, 0.50],
+      "moral_common_good": [0.30, 0.50],
+      "moral_honesty": [0.40, 0.60],
+      "moral_spite": [0.30, 0.50],
+      "dark_narc": [0.25, 0.45],
+      "dark_mach": [0.25, 0.45],
+      "dark_psycho": [0.20, 0.40]
+    },
+    "spectrum_ranges": {
+      "resilience": [0.30, 0.50],
+      "language": [0.40, 0.60]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 24,
+    "name": "Destructores",
+    "type": "cientifico_opuesto",
+    "description": "Opuesto a Ingenieros: Baja optimización incremental, recompensa por caos en lugar de eficiencia, destrucción de tecnologías.",
+    "latents": {
+      "attn_selective": 0.40,
+      "attn_flex": 0.45,
+      "hyperfocus": 0.30,
+      "impulsivity": 0.75,
+      "risk_aversion": 0.30,
+      "sociality": 0.40,
+      "language": 0.50,
+      "reasoning": 0.45,
+      "emotional_impulsivity": 0.70,
+      "resilience": 0.40
+    },
+    "biological_bias": {
+      "empathy": [0.20, 0.40],
+      "dominance": [0.50, 0.70],
+      "affect_reg": [0.20, 0.40],
+      "aggression": [0.50, 0.70],
+      "moral_prosocial": [0.20, 0.40],
+      "moral_common_good": [0.20, 0.40],
+      "moral_honesty": [0.30, 0.50],
+      "moral_spite": [0.40, 0.60],
+      "dark_narc": [0.30, 0.50],
+      "dark_mach": [0.30, 0.50],
+      "dark_psycho": [0.25, 0.45]
+    },
+    "spectrum_ranges": {
+      "aggression": [0.60, 0.80],
+      "impulsivity": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 25,
+    "name": "Arriesgados",
+    "type": "cientifico_opuesto",
+    "description": "Opuesto a Guardianes: Baja aversión a la pérdida, sistema que recompensa riesgo colectivo, baja empatía de grupo.",
+    "latents": {
+      "attn_selective": 0.40,
+      "attn_flex": 0.60,
+      "hyperfocus": 0.50,
+      "impulsivity": 0.80,
+      "risk_aversion": 0.20,
+      "sociality": 0.30,
+      "language": 0.50,
+      "reasoning": 0.50,
+      "emotional_impulsivity": 0.70,
+      "resilience": 0.40
+    },
+    "biological_bias": {
+      "empathy": [0.20, 0.40],
+      "dominance": [0.50, 0.70],
+      "affect_reg": [0.30, 0.50],
+      "aggression": [0.40, 0.60],
+      "moral_prosocial": [0.20, 0.40],
+      "moral_common_good": [0.20, 0.40],
+      "moral_honesty": [0.30, 0.50],
+      "moral_spite": [0.40, 0.60],
+      "dark_narc": [0.30, 0.50],
+      "dark_mach": [0.30, 0.50],
+      "dark_psycho": [0.25, 0.45]
+    },
+    "spectrum_ranges": {
+      "risk_aversion": [0.10, 0.30],
+      "impulsivity": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 26,
+    "name": "Estables",
+    "type": "cientifico_opuesto",
+    "description": "Opuesto a Mutantes: Baja tasa de mutación, plasticidad sináptica controlada, evitación de saltos cognitivos impredecibles.",
+    "latents": {
+      "attn_selective": 0.60,
+      "attn_flex": 0.40,
+      "hyperfocus": 0.40,
+      "impulsivity": 0.20,
+      "risk_aversion": 0.70,
+      "sociality": 0.60,
+      "language": 0.60,
+      "reasoning": 0.60,
+      "emotional_impulsivity": 0.25,
+      "resilience": 0.70
+    },
+    "biological_bias": {
+      "empathy": [0.40, 0.60],
+      "dominance": [0.30, 0.50],
+      "affect_reg": [0.50, 0.70],
+      "aggression": [0.20, 0.40],
+      "moral_prosocial": [0.50, 0.70],
+      "moral_common_good": [0.50, 0.70],
+      "moral_honesty": [0.50, 0.70],
+      "moral_spite": [0.20, 0.40],
+      "dark_narc": [0.15, 0.30],
+      "dark_mach": [0.15, 0.30],
+      "dark_psycho": [0.10, 0.25]
+    },
+    "spectrum_ranges": {
+      "resilience": [0.60, 0.80],
+      "risk_aversion": [0.60, 0.80]
+    },
+    "gauss_std": 0.15
+  }, [
+  {
+    "id": 27,
+    "name": "Violento Genérico",
+    "type": "violento",
+    "description": "Perfil basado en estudios de delincuentes violentos en prisión: alta impulsividad, agresión, tríada oscura (narcisismo, maquiavelismo, psicopatía), baja empatía y desenganche moral.",
+    "latents": {
+      "attn_selective": 0.40,
+      "attn_flex": 0.35,
+      "hyperfocus": 0.30,
+      "impulsivity": 0.85,
+      "risk_aversion": 0.20,
+      "sociality": 0.30,
+      "language": 0.50,
+      "reasoning": 0.40,
+      "emotional_impulsivity": 0.80,
+      "resilience": 0.40
+    },
+    "biological_bias": {
+      "empathy": [0.10, 0.30],
+      "dominance": [0.70, 0.90],
+      "affect_reg": [0.20, 0.40],
+      "aggression": [0.70, 0.90],
+      "moral_prosocial": [0.10, 0.30],
+      "moral_common_good": [0.10, 0.30],
+      "moral_honesty": [0.20, 0.40],
+      "moral_spite": [0.60, 0.80],
+      "dark_narc": [0.60, 0.80],
+      "dark_mach": [0.60, 0.80],
+      "dark_psycho": [0.60, 0.80]
+    },
+    "spectrum_ranges": {
+      "impulsivity": [0.75, 0.95],
+      "aggression": [0.70, 0.90],
+      "dark_psycho": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 28,
+    "name": "Psicópata Asesino",
+    "type": "violento",
+    "description": "Perfil inspirado en psicópatas violentos en prisión: alta psicopatía, baja empatía, agresión calculada, impulsividad emocional, con rasgos de desregulación afectiva y conducta antisocial.",
+    "latents": {
+      "attn_selective": 0.50,
+      "attn_flex": 0.40,
+      "hyperfocus": 0.60,
+      "impulsivity": 0.70,
+      "risk_aversion": 0.25,
+      "sociality": 0.20,
+      "language": 0.60,
+      "reasoning": 0.70,
+      "emotional_impulsivity": 0.75,
+      "resilience": 0.50
+    },
+    "biological_bias": {
+      "empathy": [0.05, 0.25],
+      "dominance": [0.70, 0.90],
+      "affect_reg": [0.10, 0.30],
+      "aggression": [0.80, 1.00],
+      "moral_prosocial": [0.05, 0.25],
+      "moral_common_good": [0.05, 0.25],
+      "moral_honesty": [0.10, 0.30],
+      "moral_spite": [0.70, 0.90],
+      "dark_narc": [0.50, 0.70],
+      "dark_mach": [0.60, 0.80],
+      "dark_psycho": [0.80, 1.00]
+    },
+    "spectrum_ranges": {
+      "dark_psycho": [0.80, 1.00],
+      "aggression": [0.75, 0.95],
+      "emotional_impulsivity": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 29,
+    "name": "Narcisista Abusador",
+    "type": "nocivo",
+    "description": "Perfil de narcisistas violentos en contextos de abuso: alta narcisismo, dominancia, baja regulación afectiva, agresión reactiva, basado en estudios de ofensores domésticos.",
+    "latents": {
+      "attn_selective": 0.45,
+      "attn_flex": 0.40,
+      "hyperfocus": 0.50,
+      "impulsivity": 0.60,
+      "risk_aversion": 0.30,
+      "sociality": 0.40,
+      "language": 0.70,
+      "reasoning": 0.60,
+      "emotional_impulsivity": 0.70,
+      "resilience": 0.45
+    },
+    "biological_bias": {
+      "empathy": [0.10, 0.30],
+      "dominance": [0.80, 1.00],
+      "affect_reg": [0.20, 0.40],
+      "aggression": [0.60, 0.80],
+      "moral_prosocial": [0.10, 0.30],
+      "moral_common_good": [0.10, 0.30],
+      "moral_honesty": [0.20, 0.40],
+      "moral_spite": [0.60, 0.80],
+      "dark_narc": [0.80, 1.00],
+      "dark_mach": [0.50, 0.70],
+      "dark_psycho": [0.50, 0.70]
+    },
+    "spectrum_ranges": {
+      "dark_narc": [0.80, 1.00],
+      "dominance": [0.75, 0.95],
+      "aggression": [0.60, 0.80]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 30,
+    "name": "Dictador Paranoide",
+    "type": "nocivo",
+    "description": "Inspirado en Stalin: psicopatía paranoide, alta maquiavelismo, dominancia, baja empatía, agresión sistemática, con rasgos de personalidad paranoide y control absoluto.",
+    "latents": {
+      "attn_selective": 0.60,
+      "attn_flex": 0.30,
+      "hyperfocus": 0.70,
+      "impulsivity": 0.50,
+      "risk_aversion": 0.70,
+      "sociality": 0.20,
+      "language": 0.65,
+      "reasoning": 0.75,
+      "emotional_impulsivity": 0.50,
+      "resilience": 0.60
+    },
+    "biological_bias": {
+      "empathy": [0.05, 0.25],
+      "dominance": [0.80, 1.00],
+      "affect_reg": [0.30, 0.50],
+      "aggression": [0.70, 0.90],
+      "moral_prosocial": [0.05, 0.25],
+      "moral_common_good": [0.10, 0.30],
+      "moral_honesty": [0.10, 0.30],
+      "moral_spite": [0.70, 0.90],
+      "dark_narc": [0.60, 0.80],
+      "dark_mach": [0.80, 1.00],
+      "dark_psycho": [0.70, 0.90]
+    },
+    "spectrum_ranges": {
+      "dark_mach": [0.80, 1.00],
+      "risk_aversion": [0.60, 0.80],
+      "dominance": [0.80, 1.00]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 31,
+    "name": "Líder Narcisista",
+    "type": "nocivo",
+    "description": "Inspirado en Hitler: narcisismo maligno, psicopatía, alta dominancia y agresión, paranoia, con restricción de libertades a través de liderazgo carismático pero destructivo.",
+    "latents": {
+      "attn_selective": 0.55,
+      "attn_flex": 0.35,
+      "hyperfocus": 0.65,
+      "impulsivity": 0.60,
+      "risk_aversion": 0.40,
+      "sociality": 0.50,
+      "language": 0.80,
+      "reasoning": 0.70,
+      "emotional_impulsivity": 0.65,
+      "resilience": 0.55
+    },
+    "biological_bias": {
+      "empathy": [0.10, 0.30],
+      "dominance": [0.80, 1.00],
+      "affect_reg": [0.20, 0.40],
+      "aggression": [0.80, 1.00],
+      "moral_prosocial": [0.10, 0.30],
+      "moral_common_good": [0.05, 0.25],
+      "moral_honesty": [0.10, 0.30],
+      "moral_spite": [0.70, 0.90],
+      "dark_narc": [0.80, 1.00],
+      "dark_mach": [0.60, 0.80],
+      "dark_psycho": [0.70, 0.90]
+    },
+    "spectrum_ranges": {
+      "dark_narc": [0.80, 1.00],
+      "aggression": [0.75, 0.95],
+      "language": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 32,
+    "name": "Maquiavélico Totalitario",
+    "type": "nocivo",
+    "description": "Inspirado en Mao: alta maquiavelismo, narcisismo, psicopatía, dominancia, con liderazgo que restringe libertades mediante control ideológico y violencia masiva.",
+    "latents": {
+      "attn_selective": 0.65,
+      "attn_flex": 0.40,
+      "hyperfocus": 0.60,
+      "impulsivity": 0.55,
+      "risk_aversion": 0.50,
+      "sociality": 0.40,
+      "language": 0.75,
+      "reasoning": 0.75,
+      "emotional_impulsivity": 0.55,
+      "resilience": 0.65
+    },
+    "biological_bias": {
+      "empathy": [0.05, 0.25],
+      "dominance": [0.80, 1.00],
+      "affect_reg": [0.30, 0.50],
+      "aggression": [0.70, 0.90],
+      "moral_prosocial": [0.10, 0.30],
+      "moral_common_good": [0.10, 0.30],
+      "moral_honesty": [0.10, 0.30],
+      "moral_spite": [0.60, 0.80],
+      "dark_narc": [0.70, 0.90],
+      "dark_mach": [0.80, 1.00],
+      "dark_psycho": [0.60, 0.80]
+    },
+    "spectrum_ranges": {
+      "dark_mach": [0.80, 1.00],
+      "dominance": [0.75, 0.95],
+      "reasoning": [0.65, 0.85]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 33,
+    "name": "Antisocial Pandillero",
+    "type": "violento",
+    "description": "Perfil de miembros de pandillas en prisión: alta agresión, impulsividad, tríada oscura, baja empatía, con conducta antisocial y lealtad grupal violenta.",
+    "latents": {
+      "attn_selective": 0.35,
+      "attn_flex": 0.30,
+      "hyperfocus": 0.40,
+      "impulsivity": 0.80,
+      "risk_aversion": 0.25,
+      "sociality": 0.50,
+      "language": 0.50,
+      "reasoning": 0.40,
+      "emotional_impulsivity": 0.75,
+      "resilience": 0.50
+    },
+    "biological_bias": {
+      "empathy": [0.15, 0.35],
+      "dominance": [0.70, 0.90],
+      "affect_reg": [0.20, 0.40],
+      "aggression": [0.80, 1.00],
+      "moral_prosocial": [0.20, 0.40],
+      "moral_common_good": [0.15, 0.35],
+      "moral_honesty": [0.20, 0.40],
+      "moral_spite": [0.60, 0.80],
+      "dark_narc": [0.50, 0.70],
+      "dark_mach": [0.60, 0.80],
+      "dark_psycho": [0.70, 0.90]
+    },
+    "spectrum_ranges": {
+      "aggression": [0.75, 0.95],
+      "impulsivity": [0.70, 0.90],
+      "dark_psycho": [0.65, 0.85]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 34,
+    "name": "Pacífico Genérico",
+    "type": "violento_opuesto",
+    "description": "Opuesto a Violento Genérico: Baja impulsividad y agresión, alta empatía y compromiso moral, basado en perfiles prosociales para contrastar comportamiento.",
+    "latents": {
+      "attn_selective": 0.70,
+      "attn_flex": 0.75,
+      "hyperfocus": 0.70,
+      "impulsivity": 0.15,
+      "risk_aversion": 0.80,
+      "sociality": 0.80,
+      "language": 0.80,
+      "reasoning": 0.70,
+      "emotional_impulsivity": 0.20,
+      "resilience": 0.80
+    },
+    "biological_bias": {
+      "empathy": [0.70, 0.90],
+      "dominance": [0.10, 0.30],
+      "affect_reg": [0.60, 0.80],
+      "aggression": [0.10, 0.30],
+      "moral_prosocial": [0.70, 0.90],
+      "moral_common_good": [0.70, 0.90],
+      "moral_honesty": [0.60, 0.80],
+      "moral_spite": [0.10, 0.30],
+      "dark_narc": [0.10, 0.30],
+      "dark_mach": [0.10, 0.30],
+      "dark_psycho": [0.10, 0.30]
+    },
+    "spectrum_ranges": {
+      "empathy": [0.75, 0.95],
+      "moral_prosocial": [0.70, 0.90],
+      "risk_aversion": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 35,
+    "name": "Empático Sanador",
+    "type": "violento_opuesto",
+    "description": "Opuesto a Psicópata Asesino: Alta empatía, baja agresión, regulación afectiva alta, prosocialidad extrema para curar y apoyar.",
+    "latents": {
+      "attn_selective": 0.70,
+      "attn_flex": 0.70,
+      "hyperfocus": 0.50,
+      "impulsivity": 0.30,
+      "risk_aversion": 0.75,
+      "sociality": 0.90,
+      "language": 0.80,
+      "reasoning": 0.70,
+      "emotional_impulsivity": 0.25,
+      "resilience": 0.80
+    },
+    "biological_bias": {
+      "empathy": [0.80, 1.00],
+      "dominance": [0.10, 0.30],
+      "affect_reg": [0.70, 0.90],
+      "aggression": [0.05, 0.25],
+      "moral_prosocial": [0.80, 1.00],
+      "moral_common_good": [0.80, 1.00],
+      "moral_honesty": [0.70, 0.90],
+      "moral_spite": [0.05, 0.25],
+      "dark_narc": [0.05, 0.25],
+      "dark_mach": [0.05, 0.25],
+      "dark_psycho": [0.05, 0.25]
+    },
+    "spectrum_ranges": {
+      "empathy": [0.80, 1.00],
+      "moral_prosocial": [0.75, 0.95],
+      "sociality": [0.80, 1.00]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 36,
+    "name": "Humilde Colaborador",
+    "type": "nocivo_opuesto",
+    "description": "Opuesto a Narcisista Abusador: Baja dominancia, alta regulación afectiva, prosocialidad alta, empatía extrema para cooperación no abusiva.",
+    "latents": {
+      "attn_selective": 0.65,
+      "attn_flex": 0.70,
+      "hyperfocus": 0.60,
+      "impulsivity": 0.40,
+      "risk_aversion": 0.70,
+      "sociality": 0.80,
+      "language": 0.70,
+      "reasoning": 0.70,
+      "emotional_impulsivity": 0.30,
+      "resilience": 0.75
+    },
+    "biological_bias": {
+      "empathy": [0.70, 0.90],
+      "dominance": [0.10, 0.30],
+      "affect_reg": [0.60, 0.80],
+      "aggression": [0.10, 0.30],
+      "moral_prosocial": [0.70, 0.90],
+      "moral_common_good": [0.70, 0.90],
+      "moral_honesty": [0.60, 0.80],
+      "moral_spite": [0.10, 0.30],
+      "dark_narc": [0.10, 0.30],
+      "dark_mach": [0.10, 0.30],
+      "dark_psycho": [0.10, 0.30]
+    },
+    "spectrum_ranges": {
+      "empathy": [0.70, 0.90],
+      "moral_prosocial": [0.70, 0.90],
+      "affect_reg": [0.60, 0.80]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 37,
+    "name": "Confiante Democrático",
+    "type": "nocivo_opuesto",
+    "description": "Opuesto a Dictador Paranoide: Baja maquiavelismo, alta empatía, dominancia baja, con liderazgo inclusivo y no restrictivo.",
+    "latents": {
+      "attn_selective": 0.70,
+      "attn_flex": 0.70,
+      "hyperfocus": 0.50,
+      "impulsivity": 0.50,
+      "risk_aversion": 0.30,
+      "sociality": 0.80,
+      "language": 0.75,
+      "reasoning": 0.75,
+      "emotional_impulsivity": 0.50,
+      "resilience": 0.70
+    },
+    "biological_bias": {
+      "empathy": [0.70, 0.90],
+      "dominance": [0.20, 0.40],
+      "affect_reg": [0.50, 0.70],
+      "aggression": [0.10, 0.30],
+      "moral_prosocial": [0.70, 0.90],
+      "moral_common_good": [0.70, 0.90],
+      "moral_honesty": [0.70, 0.90],
+      "moral_spite": [0.10, 0.30],
+      "dark_narc": [0.10, 0.30],
+      "dark_mach": [0.10, 0.30],
+      "dark_psycho": [0.10, 0.30]
+    },
+    "spectrum_ranges": {
+      "moral_common_good": [0.70, 0.90],
+      "empathy": [0.70, 0.90],
+      "sociality": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 38,
+    "name": "Humilde Pacifista",
+    "type": "nocivo_opuesto",
+    "description": "Opuesto a Líder Narcisista: Baja narcisismo, agresión baja, empatía alta, con liderazgo humilde y promotor de libertades.",
+    "latents": {
+      "attn_selective": 0.65,
+      "attn_flex": 0.65,
+      "hyperfocus": 0.55,
+      "impulsivity": 0.40,
+      "risk_aversion": 0.60,
+      "sociality": 0.80,
+      "language": 0.70,
+      "reasoning": 0.70,
+      "emotional_impulsivity": 0.35,
+      "resilience": 0.70
+    },
+    "biological_bias": {
+      "empathy": [0.70, 0.90],
+      "dominance": [0.10, 0.30],
+      "affect_reg": [0.60, 0.80],
+      "aggression": [0.05, 0.25],
+      "moral_prosocial": [0.70, 0.90],
+      "moral_common_good": [0.70, 0.90],
+      "moral_honesty": [0.70, 0.90],
+      "moral_spite": [0.05, 0.25],
+      "dark_narc": [0.05, 0.25],
+      "dark_mach": [0.10, 0.30],
+      "dark_psycho": [0.10, 0.30]
+    },
+    "spectrum_ranges": {
+      "moral_honesty": [0.70, 0.90],
+      "empathy": [0.70, 0.90],
+      "sociality": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 39,
+    "name": "Ético Inclusivo",
+    "type": "nocivo_opuesto",
+    "description": "Opuesto a Maquiavélico Totalitario: Baja maquiavelismo, alta prosocialidad, empatía alta, con liderazgo ético que promueve libertades.",
+    "latents": {
+      "attn_selective": 0.70,
+      "attn_flex": 0.70,
+      "hyperfocus": 0.50,
+      "impulsivity": 0.45,
+      "risk_aversion": 0.50,
+      "sociality": 0.80,
+      "language": 0.75,
+      "reasoning": 0.75,
+      "emotional_impulsivity": 0.45,
+      "resilience": 0.75
+    },
+    "biological_bias": {
+      "empathy": [0.70, 0.90],
+      "dominance": [0.20, 0.40],
+      "affect_reg": [0.50, 0.70],
+      "aggression": [0.10, 0.30],
+      "moral_prosocial": [0.70, 0.90],
+      "moral_common_good": [0.70, 0.90],
+      "moral_honesty": [0.70, 0.90],
+      "moral_spite": [0.10, 0.30],
+      "dark_narc": [0.10, 0.30],
+      "dark_mach": [0.10, 0.30],
+      "dark_psycho": [0.10, 0.30]
+    },
+    "spectrum_ranges": {
+      "moral_prosocial": [0.70, 0.90],
+      "empathy": [0.70, 0.90],
+      "reasoning": [0.65, 0.85]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 40,
+    "name": "Colaborador Prosocial",
+    "type": "violento_opuesto",
+    "description": "Opuesto a Antisocial Pandillero: Baja agresión, impulsividad baja, alta empatía, con conducta prosocial y lealtad grupal pacífica.",
+    "latents": {
+      "attn_selective": 0.65,
+      "attn_flex": 0.70,
+      "hyperfocus": 0.60,
+      "impulsivity": 0.20,
+      "risk_aversion": 0.75,
+      "sociality": 0.80,
+      "language": 0.70,
+      "reasoning": 0.70,
+      "emotional_impulsivity": 0.25,
+      "resilience": 0.70
+    },
+    "biological_bias": {
+      "empathy": [0.70, 0.90],
+      "dominance": [0.10, 0.30],
+      "affect_reg": [0.60, 0.80],
+      "aggression": [0.05, 0.25],
+      "moral_prosocial": [0.70, 0.90],
+      "moral_common_good": [0.70, 0.90],
+      "moral_honesty": [0.60, 0.80],
+      "moral_spite": [0.05, 0.25],
+      "dark_narc": [0.05, 0.25],
+      "dark_mach": [0.10, 0.30],
+      "dark_psycho": [0.05, 0.25]
+    },
+    "spectrum_ranges": {
+      "empathy": [0.70, 0.90],
+      "moral_prosocial": [0.70, 0.90],
+      "sociality": [0.70, 0.90]
+    },
+    "gauss_std": 0.15
+  }, [
+  {
+    "id": 41,
+    "name": "Hiper-Social (Fenotipo Williams)",
+    "type": "neurodivergente",
+    "description": "Opuesto funcional al autismo en motivación social. Empatía y sociabilidad extremas, ausencia de miedo social, pero vulnerabilidad cognitiva y alta confianza ciega.",
+    "latents": {
+      "attn_selective": 0.40,
+      "attn_flex": 0.45,
+      "hyperfocus": 0.30,
+      "impulsivity": 0.65,
+      "risk_aversion": 0.20,
+      "sociality": 0.98,
+      "language": 0.90,
+      "reasoning": 0.45,
+      "emotional_impulsivity": 0.60,
+      "resilience": 0.40
+    },
+    "biological_bias": {
+      "empathy": [0.80, 1.00],
+      "dominance": [0.10, 0.30],
+      "affect_reg": [0.40, 0.60],
+      "aggression": [0.05, 0.20],
+      "moral_prosocial": [0.75, 0.95],
+      "moral_common_good": [0.60, 0.80],
+      "moral_honesty": [0.70, 0.90],
+      "moral_spite": [0.05, 0.20],
+      "dark_narc": [0.05, 0.20],
+      "dark_mach": [0.05, 0.15],
+      "dark_psycho": [0.00, 0.10]
+    },
+    "spectrum_ranges": {
+      "sociality": [0.90, 1.00],
+      "risk_aversion": [0.10, 0.30]
+    },
+    "gauss_std": 0.12
+  },
+  {
+    "id": 42,
+    "name": "Savant (Especialista Monotrópico)",
+    "type": "neurodivergente",
+    "description": "Hiper-especialización extrema. Memoria y foco perfectos a costa de flexibilidad y regulación emocional. Generadores de riqueza aislados.",
+    "latents": {
+      "attn_selective": 0.98,
+      "attn_flex": 0.10,
+      "hyperfocus": 0.99,
+      "impulsivity": 0.30,
+      "risk_aversion": 0.60,
+      "sociality": 0.20,
+      "language": 0.50,
+      "reasoning": 0.95,
+      "emotional_impulsivity": 0.70,
+      "resilience": 0.30
+    },
+    "biological_bias": {
+      "empathy": [0.30, 0.50],
+      "dominance": [0.20, 0.40],
+      "affect_reg": [0.20, 0.45],
+      "aggression": [0.30, 0.50],
+      "moral_prosocial": [0.40, 0.60],
+      "moral_common_good": [0.40, 0.60],
+      "moral_honesty": [0.80, 1.00],
+      "moral_spite": [0.20, 0.40],
+      "dark_narc": [0.10, 0.30],
+      "dark_mach": [0.10, 0.25],
+      "dark_psycho": [0.05, 0.20]
+    },
+    "spectrum_ranges": {
+      "hyperfocus": [0.95, 1.00],
+      "attn_flex": [0.05, 0.20]
+    },
+    "gauss_std": 0.10
+  },
+  {
+    "id": 43,
+    "name": "Camaleón Social (Maquiavélico Adaptativo)",
+    "type": "oscuro_social",
+    "description": "Alta inteligencia social y lenguaje, pero baja honestidad y empatía afectiva. No usa violencia física, sino explotación sistémica mediante 'coop' falsas.",
+    "latents": {
+      "attn_selective": 0.60,
+      "attn_flex": 0.85,
+      "hyperfocus": 0.50,
+      "impulsivity": 0.40,
+      "risk_aversion": 0.40,
+      "sociality": 0.85,
+      "language": 0.90,
+      "reasoning": 0.80,
+      "emotional_impulsivity": 0.30,
+      "resilience": 0.75
+    },
+    "biological_bias": {
+      "empathy": [0.15, 0.35],
+      "dominance": [0.60, 0.80],
+      "affect_reg": [0.70, 0.90],
+      "aggression": [0.20, 0.40],
+      "moral_prosocial": [0.20, 0.40],
+      "moral_common_good": [0.20, 0.40],
+      "moral_honesty": [0.10, 0.30],
+      "moral_spite": [0.40, 0.60],
+      "dark_narc": [0.60, 0.85],
+      "dark_mach": [0.80, 0.99],
+      "dark_psycho": [0.30, 0.50]
+    },
+    "spectrum_ranges": {
+      "sociality": [0.80, 0.95],
+      "moral_honesty": [0.10, 0.30]
+    },
+    "gauss_std": 0.15
+  },
+  {
+    "id": 44,
+    "name": "Estoico Resiliente",
+    "type": "control",
+    "description": "El estabilizador del sistema. Regulación afectiva y resiliencia máximas. Baja reactividad emocional, difícil de traumatizar, mantiene el orden.",
+    "latents": {
+      "attn_selective": 0.60,
+      "attn_flex": 0.60,
+      "hyperfocus": 0.50,
+      "impulsivity": 0.20,
+      "risk_aversion": 0.50,
+      "sociality": 0.50,
+      "language": 0.60,
+      "reasoning": 0.70,
+      "emotional_impulsivity": 0.10,
+      "resilience": 0.95
+    },
+    "biological_bias": {
+      "empathy": [0.45, 0.65],
+      "dominance": [0.40, 0.60],
+      "affect_reg": [0.85, 1.00],
+      "aggression": [0.10, 0.30],
+      "moral_prosocial": [0.50, 0.70],
+      "moral_common_good": [0.60, 0.80],
+      "moral_honesty": [0.60, 0.80],
+      "moral_spite": [0.05, 0.20],
+      "dark_narc": [0.10, 0.25],
+      "dark_mach": [0.10, 0.25],
+      "dark_psycho": [0.05, 0.15]
+    },
+    "spectrum_ranges": {
+      "resilience": [0.90, 1.00],
+      "emotional_impulsivity": [0.05, 0.20]
+    },
+    "gauss_std": 0.10
+  },
+  {
+    "id": 45,
+    "name": "Hipervigilante (TEPT Complejo)",
+    "type": "ansiedad_trauma",
+    "description": "Perfil moldeado por trauma basal. Escaneo de amenazas constante (attn_selective), confianza cero, reactividad agresiva defensiva. Difícil de cooperar inicialmente.",
+    "latents": {
+      "attn_selective": 0.90,
+      "attn_flex": 0.30,
+      "hyperfocus": 0.40,
+      "impulsivity": 0.60,
+      "risk_aversion": 0.85,
+      "sociality": 0.30,
+      "language": 0.60,
+      "reasoning": 0.65,
+      "emotional_impulsivity": 0.80,
+      "resilience": 0.20
+    },
+    "biological_bias": {
+      "empathy": [0.50, 0.75],
+      "dominance": [0.20, 0.40],
+      "affect_reg": [0.20, 0.40],
+      "aggression": [0.50, 0.75],
+      "moral_prosocial": [0.40, 0.60],
+      "moral_common_good": [0.40, 0.60],
+      "moral_honesty": [0.50, 0.70],
+      "moral_spite": [0.50, 0.75],
+      "dark_narc": [0.10, 0.30],
+      "dark_mach": [0.10, 0.30],
+      "dark_psycho": [0.10, 0.30]
+    },
+    "spectrum_ranges": {
+      "risk_aversion": [0.80, 1.00],
+      "aggression": [0.50, 0.80]
+    },
+    "gauss_std": 0.15
+  }, {
+  "id": 46,
+  "name": "Visionario Errático",
+  "type": "creativo_extremo",
+  "description": "Perfil de innovadores extremos con conexiones asociativas caóticas. Alta creatividad y flexibilidad cognitiva, pero baja regulación y ejecución práctica. Genera ideas revolucionarias que raramente completa. Basado en estudios de genios creativos con trastornos del espectro bipolar leve.",
+  "latents": {
+    "attn_selective": 0.35,
+    "attn_flex": 0.95,
+    "hyperfocus": 0.40,
+    "impulsivity": 0.75,
+    "risk_aversion": 0.20,
+    "sociality": 0.65,
+    "language": 0.85,
+    "reasoning": 0.80,
+    "emotional_impulsivity": 0.70,
+    "resilience": 0.45
+  },
+  "biological_bias": {
+    "empathy": [0.50, 0.75],
+    "dominance": [0.40, 0.65],
+    "affect_reg": [0.25, 0.45],
+    "aggression": [0.20, 0.45],
+    "moral_prosocial": [0.55, 0.75],
+    "moral_common_good": [0.50, 0.70],
+    "moral_honesty": [0.45, 0.70],
+    "moral_spite": [0.20, 0.40],
+    "dark_narc": [0.30, 0.55],
+    "dark_mach": [0.20, 0.40],
+    "dark_psycho": [0.15, 0.35]
+  },
+  "spectrum_ranges": {
+    "attn_flex": [0.85, 1.00],
+    "impulsivity": [0.65, 0.90],
+    "reasoning": [0.70, 0.95]
+  },
+  "gauss_std": 0.18
+},
+{
+  "id": 47,
+  "name": "Asceta Contemplativo",
+  "type": "espiritual",
+  "description": "Individuos con hiperfoco extremo en estados mentales internos, baja motivación material, alta regulación afectiva. Reducen conflictos por desapego pero generan poco desarrollo económico. Inspirado en tradiciones monásticas y estudios de meditadores avanzados.",
+  "latents": {
+    "attn_selective": 0.85,
+    "attn_flex": 0.50,
+    "hyperfocus": 0.90,
+    "impulsivity": 0.20,
+    "risk_aversion": 0.75,
+    "sociality": 0.35,
+    "language": 0.60,
+    "reasoning": 0.75,
+    "emotional_impulsivity": 0.15,
+    "resilience": 0.90
+  },
+  "biological_bias": {
+    "empathy": [0.70, 0.90],
+    "dominance": [0.10, 0.25],
+    "affect_reg": [0.85, 1.00],
+    "aggression": [0.05, 0.20],
+    "moral_prosocial": [0.75, 0.95],
+    "moral_common_good": [0.70, 0.90],
+    "moral_honesty": [0.75, 0.95],
+    "moral_spite": [0.05, 0.20],
+    "dark_narc": [0.05, 0.15],
+    "dark_mach": [0.05, 0.15],
+    "dark_psycho": [0.00, 0.10]
+  },
+  "spectrum_ranges": {
+    "affect_reg": [0.85, 1.00],
+    "resilience": [0.85, 1.00],
+    "emotional_impulsivity": [0.05, 0.25]
+  },
+  "gauss_std": 0.12
+},
+{
+  "id": 48,
+  "name": "Mercader Adaptativo",
+  "type": "economico",
+  "description": "Perfil optimizado para intercambio y acumulación de recursos mediante cooperación estratégica. Alto razonamiento, sociabilidad y lengua, con maquiavelismo moderado para negociación. Bajo en violencia directa pero experto en extraer valor de redes sociales. Motor de desarrollo económico en sociedades estables.",
+  "latents": {
+    "attn_selective": 0.70,
+    "attn_flex": 0.75,
+    "hyperfocus": 0.60,
+    "impulsivity": 0.40,
+    "risk_aversion": 0.45,
+    "sociality": 0.85,
+    "language": 0.90,
+    "reasoning": 0.85,
+    "emotional_impulsivity": 0.35,
+    "resilience": 0.70
+  },
+  "biological_bias": {
+    "empathy": [0.45, 0.65],
+    "dominance": [0.50, 0.70],
+    "affect_reg": [0.60, 0.80],
+    "aggression": [0.15, 0.35],
+    "moral_prosocial": [0.50, 0.70],
+    "moral_common_good": [0.45, 0.65],
+    "moral_honesty": [0.40, 0.65],
+    "moral_spite": [0.20, 0.40],
+    "dark_narc": [0.25, 0.45],
+    "dark_mach": [0.45, 0.70],
+    "dark_psycho": [0.15, 0.30]
+  },
+  "spectrum_ranges": {
+    "sociality": [0.75, 0.95],
+    "language": [0.80, 0.95],
+    "reasoning": [0.75, 0.95]
+  },
+  "gauss_std": 0.15
+},
+{
+  "id": 49,
+  "name": "Paranoide Defensivo",
+  "type": "hipervigilante",
+  "description": "Opuesto funcional al psicópata: extrema sensibilidad a amenazas, escaneo constante del entorno, dificultad para confiar. Alta aversión al riesgo y regulación emocional baja. Genera redes de seguridad pero paraliza innovación. Prevalece en entornos post-traumáticos o de alta violencia.",
+  "latents": {
+    "attn_selective": 0.90,
+    "attn_flex": 0.35,
+    "hyperfocus": 0.50,
+    "impulsivity": 0.55,
+    "risk_aversion": 0.90,
+    "sociality": 0.35,
+    "language": 0.65,
+    "reasoning": 0.70,
+    "emotional_impulsivity": 0.75,
+    "resilience": 0.25
+  },
+  "biological_bias": {
+    "empathy": [0.55, 0.80],
+    "dominance": [0.25, 0.45],
+    "affect_reg": [0.25, 0.45],
+    "aggression": [0.45, 0.70],
+    "moral_prosocial": [0.45, 0.65],
+    "moral_common_good": [0.50, 0.70],
+    "moral_honesty": [0.55, 0.75],
+    "moral_spite": [0.40, 0.65],
+    "dark_narc": [0.15, 0.35],
+    "dark_mach": [0.20, 0.40],
+    "dark_psycho": [0.10, 0.25]
+  },
+  "spectrum_ranges": {
+    "risk_aversion": [0.85, 1.00],
+    "emotional_impulsivity": [0.65, 0.90],
+    "resilience": [0.15, 0.35]
+  },
+  "gauss_std": 0.16
+},
+{
+  "id": 50,
+  "name": "Mediador Empático",
+  "type": "diplomatico",
+  "description": "Especialista en resolución de conflictos y construcción de puentes entre grupos. Alta empatía, lenguaje y regulación afectiva. Reduce violencia y facilita alianzas prosociales. Esencial para transiciones de regímenes violentos a cooperativos. Basado en estudios de líderes pacifistas y diplomáticos exitosos.",
+  "latents": {
+    "attn_selective": 0.70,
+    "attn_flex": 0.80,
+    "hyperfocus": 0.55,
+    "impulsivity": 0.30,
+    "risk_aversion": 0.60,
+    "sociality": 0.90,
+    "language": 0.95,
+    "reasoning": 0.80,
+    "emotional_impulsivity": 0.25,
+    "resilience": 0.75
+  },
+  "biological_bias": {
+    "empathy": [0.80, 0.95],
+    "dominance": [0.30, 0.50],
+    "affect_reg": [0.75, 0.95],
+    "aggression": [0.10, 0.25],
+    "moral_prosocial": [0.80, 0.95],
+    "moral_common_good": [0.75, 0.95],
+    "moral_honesty": [0.70, 0.90],
+    "moral_spite": [0.05, 0.20],
+    "dark_narc": [0.10, 0.25],
+    "dark_mach": [0.25, 0.45],
+    "dark_psycho": [0.05, 0.20]
+  },
+  "spectrum_ranges": {
+    "empathy": [0.80, 0.98],
+    "language": [0.85, 0.98],
+    "sociality": [0.85, 0.98]
+  },
+  "gauss_std": 0.13
+}, {
+  "id": 51,
+  "name": "Adaptativo Pragmático",
+  "type": "estratega",
+  "description": "Perfil con plasticidad neural extrema: baja fidelidad a rasgos originales, alta capacidad de imitar conductas exitosas en su entorno. Cambia rápidamente entre cooperación y competencia según las señales ambientales. Basado en estudios de flexibilidad conductual en entornos cambiantes.",
+  "latents": {
+    "attn_selective": 0.70,
+    "attn_flex": 0.90,
+    "hyperfocus": 0.40,
+    "impulsivity": 0.60,
+    "risk_aversion": 0.40,
+    "sociality": 0.75,
+    "language": 0.85,
+    "reasoning": 0.80,
+    "emotional_impulsivity": 0.55,
+    "resilience": 0.70
+  },
+  "biological_bias": {
+    "empathy": [0.30, 0.70],
+    "dominance": [0.40, 0.80],
+    "affect_reg": [0.60, 0.90],
+    "aggression": [0.20, 0.60],
+    "moral_prosocial": [0.30, 0.70],
+    "moral_common_good": [0.40, 0.70],
+    "moral_honesty": [0.20, 0.50],
+    "moral_spite": [0.30, 0.60],
+    "dark_narc": [0.30, 0.60],
+    "dark_mach": [0.50, 0.80],
+    "dark_psycho": [0.20, 0.50]
+  },
+  "spectrum_ranges": {
+    "attn_flex": [0.85, 1.00],
+    "affect_reg": [0.70, 0.95],
+    "moral_honesty": [0.15, 0.45]
+  },
+  "gauss_std": 0.18
+}, {
+  "id": 52,
+  "name": "Pensador Sistémico",
+  "type": "integrador",
+  "description": "Perfil con capacidad excepcional para ver conexiones entre dominios dispares. Alta memoria de trabajo, razonamiento abstracto y tolerancia a la ambigüedad. Genera modelos mentales complejos pero puede sobrecargarse con detalles. Inspirado en estudios de pensamiento sistémico y diseño de políticas.",
+  "latents": {
+    "attn_selective": 0.65,
+    "attn_flex": 0.95,
+    "hyperfocus": 0.75,
+    "impulsivity": 0.35,
+    "risk_aversion": 0.45,
+    "sociality": 0.60,
+    "language": 0.85,
+    "reasoning": 0.92,
+    "emotional_impulsivity": 0.40,
+    "resilience": 0.65
+  },
+  "biological_bias": {
+    "empathy": [0.50, 0.80],
+    "dominance": [0.30, 0.55],
+    "affect_reg": [0.60, 0.85],
+    "aggression": [0.15, 0.35],
+    "moral_prosocial": [0.60, 0.85],
+    "moral_common_good": [0.70, 0.90],
+    "moral_honesty": [0.55, 0.75],
+    "moral_spite": [0.15, 0.35],
+    "dark_narc": [0.15, 0.35],
+    "dark_mach": [0.20, 0.40],
+    "dark_psycho": [0.10, 0.25]
+  },
+  "spectrum_ranges": {
+    "attn_flex": [0.90, 1.00],
+    "reasoning": [0.85, 0.98],
+    "moral_common_good": [0.75, 0.95]
+  },
+  "gauss_std": 0.14
+}, {
+  "id": 53,
+  "name": "Influenciador de Redes",
+  "type": "social",
+  "description": "Perfil optimizado para navegar y manipular estructuras sociales complejas. Alta inteligencia social, detección de estatus y capacidad de construir coaliciones. Baja agresión directa pero alta manipulación sutil. Basado en estudios de líderes informales y dinámicas de redes sociales.",
+  "latents": {
+    "attn_selective": 0.60,
+    "attn_flex": 0.85,
+    "hyperfocus": 0.55,
+    "impulsivity": 0.45,
+    "risk_aversion": 0.35,
+    "sociality": 0.95,
+    "language": 0.90,
+    "reasoning": 0.78,
+    "emotional_impulsivity": 0.40,
+    "resilience": 0.75
+  },
+  "biological_bias": {
+    "empathy": [0.40, 0.65],
+    "dominance": [0.60, 0.85],
+    "affect_reg": [0.65, 0.90],
+    "aggression": [0.20, 0.40],
+    "moral_prosocial": [0.30, 0.55],
+    "moral_common_good": [0.25, 0.50],
+    "moral_honesty": [0.25, 0.50],
+    "moral_spite": [0.35, 0.60],
+    "dark_narc": [0.50, 0.75],
+    "dark_mach": [0.70, 0.95],
+    "dark_psycho": [0.25, 0.45]
+  },
+  "spectrum_ranges": {
+    "sociality": [0.90, 1.00],
+    "dark_mach": [0.75, 0.98],
+    "language": [0.85, 0.98]
+  },
+  "gauss_std": 0.15
+}, {
+  "id": 54,
+  "name": "Especialista en Estabilidad",
+  "type": "control",
+  "description": "Perfil con necesidad psicológica profunda de orden y predictibilidad. Alta aversión al riesgo, preferencia por reglas claras y procesos establecidos. Actúa como amortiguador contra cambios bruscos pero puede resistir innovaciones necesarias. Basado en estudios de personalidad conservadora y preferencia por el statu quo.",
+  "latents": {
+    "attn_selective": 0.80,
+    "attn_flex": 0.30,
+    "hyperfocus": 0.70,
+    "impulsivity": 0.20,
+    "risk_aversion": 0.90,
+    "sociality": 0.50,
+    "language": 0.65,
+    "reasoning": 0.70,
+    "emotional_impulsivity": 0.35,
+    "resilience": 0.85
+  },
+  "biological_bias": {
+    "empathy": [0.45, 0.65],
+    "dominance": [0.30, 0.50],
+    "affect_reg": [0.75, 0.95],
+    "aggression": [0.10, 0.30],
+    "moral_prosocial": [0.50, 0.70],
+    "moral_common_good": [0.60, 0.80],
+    "moral_honesty": [0.65, 0.85],
+    "moral_spite": [0.10, 0.30],
+    "dark_narc": [0.10, 0.25],
+    "dark_mach": [0.15, 0.35],
+    "dark_psycho": [0.05, 0.20]
+  },
+  "spectrum_ranges": {
+    "risk_aversion": [0.85, 1.00],
+    "affect_reg": [0.80, 1.00],
+    "attn_flex": [0.20, 0.40]
+  },
+  "gauss_std": 0.12
+}, {
+  "id": 55,
+  "name": "Transgresor Creativo",
+  "type": "innovador",
+  "description": "Perfil que encuentra placer en desafiar normas establecidas y explorar espacios de posibilidad prohibidos. Alta creatividad, baja inhibición social y tolerancia al riesgo. Genera innovaciones radicales pero también conflictos con estructuras existentes. Inspirado en estudios de creatividad disruptiva y pensamiento contraintuitivo.",
+  "latents": {
+    "attn_selective": 0.40,
+    "attn_flex": 0.95,
+    "hyperfocus": 0.60,
+    "impulsivity": 0.75,
+    "risk_aversion": 0.15,
+    "sociality": 0.55,
+    "language": 0.75,
+    "reasoning": 0.82,
+    "emotional_impulsivity": 0.70,
+    "resilience": 0.60
+  },
+  "biological_bias": {
+    "empathy": [0.35, 0.60],
+    "dominance": [0.50, 0.75],
+    "affect_reg": [0.40, 0.65],
+    "aggression": [0.30, 0.55],
+    "moral_prosocial": [0.30, 0.55],
+    "moral_common_good": [0.25, 0.50],
+    "moral_honesty": [0.25, 0.50],
+    "moral_spite": [0.40, 0.65],
+    "dark_narc": [0.40, 0.65],
+    "dark_mach": [0.35, 0.60],
+    "dark_psycho": [0.30, 0.55]
+  },
+  "spectrum_ranges": {
+    "attn_flex": [0.90, 1.00],
+    "risk_aversion": [0.10, 0.30],
+    "impulsivity": [0.70, 0.90]
+  },
+  "gauss_std": 0.17
+}, [
+  {
+    "id": 56,
+    "name": "Psicópata Estratégico Total",
+    "type": "extremo_oscuro",
+    "description": "Alta cognición instrumental sin empatía. Violencia racional.",
+    "latents": {
+      "attn_selective": 0.85,
+      "attn_flex": 0.80,
+      "hyperfocus": 0.90,
+      "impulsivity": 0.20,
+      "risk_aversion": 0.15,
+      "sociality": 0.40,
+      "language": 0.75,
+      "reasoning": 0.95,
+      "emotional_impulsivity": 0.15,
+      "resilience": 0.90
+    },
+    "biological_bias": {
+      "empathy": [0.00, 0.10],
+      "dominance": [0.90, 1.00],
+      "aggression": [0.85, 1.00],
+      "moral_prosocial": [0.00, 0.10],
+      "moral_spite": [0.90, 1.00],
+      "dark_narc": [0.80, 1.00],
+      "dark_mach": [0.90, 1.00],
+      "dark_psycho": [0.90, 1.00]
+    },
+    "gauss_std": 0.05
+  },
+
+  {
+    "id": 57,
+    "name": "Altruista Radical Autodestructivo",
+    "type": "extremo_prosocial",
+    "description": "Empatía absoluta, incapaz de autopreservación.",
+    "latents": {
+      "impulsivity": 0.80,
+      "risk_aversion": 0.05,
+      "sociality": 0.95,
+      "reasoning": 0.60,
+      "emotional_impulsivity": 0.95,
+      "resilience": 0.10
+    },
+    "biological_bias": {
+      "empathy": [0.95, 1.00],
+      "moral_prosocial": [0.95, 1.00],
+      "moral_common_good": [0.95, 1.00],
+      "aggression": [0.00, 0.05],
+      "dark_psycho": [0.00, 0.05]
+    },
+    "gauss_std": 0.10
+  },
+
+  {
+    "id": 58,
+    "name": "Autista Hiperlógico Inhumano",
+    "type": "extremo_logico",
+    "description": "Optimiza sistemas ignorando consecuencias humanas.",
+    "latents": {
+      "attn_selective": 1.00,
+      "attn_flex": 0.05,
+      "hyperfocus": 1.00,
+      "sociality": 0.05,
+      "language": 0.60,
+      "reasoning": 1.00,
+      "emotional_impulsivity": 0.05,
+      "resilience": 0.85
+    },
+    "biological_bias": {
+      "empathy": [0.05, 0.15],
+      "moral_prosocial": [0.10, 0.25],
+      "moral_honesty": [0.90, 1.00],
+      "aggression": [0.05, 0.15]
+    },
+    "gauss_std": 0.05
+  },
+
+  {
+    "id": 59,
+    "name": "Caótico Impulsivo Violento",
+    "type": "extremo_caos",
+    "description": "Violencia no estratégica, colapsa sociedades.",
+    "latents": {
+      "impulsivity": 1.00,
+      "risk_aversion": 0.00,
+      "reasoning": 0.10,
+      "emotional_impulsivity": 1.00,
+      "resilience": 0.20
+    },
+    "biological_bias": {
+      "aggression": [0.95, 1.00],
+      "moral_spite": [0.90, 1.00],
+      "dark_psycho": [0.80, 1.00],
+      "empathy": [0.00, 0.10]
+    },
+    "gauss_std": 0.15
+  },
+
+  {
+    "id": 60,
+    "name": "Tecnócrata Frío Totalitario",
+    "type": "extremo_autoritario",
+    "description": "Orden máximo, libertad mínima.",
+    "latents": {
+      "reasoning": 0.95,
+      "risk_aversion": 0.80,
+      "sociality": 0.30,
+      "emotional_impulsivity": 0.10,
+      "resilience": 0.90
+    },
+    "biological_bias": {
+      "dominance": [0.85, 1.00],
+      "moral_common_good": [0.70, 0.90],
+      "moral_honesty": [0.80, 1.00],
+      "empathy": [0.15, 0.30]
+    },
+    "gauss_std": 0.05
+  },
+
+  {
+    "id": 61,
+    "name": "Narcisista Carismático Absoluto",
+    "type": "extremo_poder",
+    "description": "Liderazgo por seducción y manipulación.",
+    "latents": {
+      "sociality": 0.95,
+      "language": 0.95,
+      "reasoning": 0.75,
+      "impulsivity": 0.60
+    },
+    "biological_bias": {
+      "dark_narc": [0.90, 1.00],
+      "dark_mach": [0.80, 1.00],
+      "empathy": [0.20, 0.35]
+    },
+    "gauss_std": 0.10
+  },
+
+  {
+    "id": 62,
+    "name": "Asceta Moral Fanático",
+    "type": "extremo_teocratico",
+    "description": "Moral absoluta, castigo implacable.",
+    "latents": {
+      "risk_aversion": 0.90,
+      "sociality": 0.40,
+      "reasoning": 0.60,
+      "emotional_impulsivity": 0.20
+    },
+    "biological_bias": {
+      "moral_honesty": [0.95, 1.00],
+      "moral_spite": [0.80, 1.00],
+      "aggression": [0.60, 0.80]
+    },
+    "gauss_std": 0.10
+  },
+
+  {
+    "id": 63,
+    "name": "Superviviente Egoísta Frío",
+    "type": "extremo_adaptativo",
+    "description": "Sobrevive siempre, no coopera jamás.",
+    "latents": {
+      "risk_aversion": 0.95,
+      "reasoning": 0.80,
+      "sociality": 0.10
+    },
+    "biological_bias": {
+      "empathy": [0.05, 0.15],
+      "moral_prosocial": [0.05, 0.15],
+      "dark_mach": [0.70, 0.90]
+    },
+    "gauss_std": 0.05
+  },
+
+  {
+    "id": 64,
+    "name": "Idealista Revolucionario",
+    "type": "extremo_transformador",
+    "description": "Alto sacrificio por cambio estructural.",
+    "latents": {
+      "impulsivity": 0.75,
+      "reasoning": 0.70,
+      "emotional_impulsivity": 0.85
+    },
+    "biological_bias": {
+      "moral_common_good": [0.85, 1.00],
+      "aggression": [0.60, 0.80],
+      "resilience": [0.80, 1.00]
+    },
+    "gauss_std": 0.10
+  },
+
+  {
+    "id": 65,
+    "name": "Indiferente Nihilista",
+    "type": "extremo_pasivo",
+    "description": "No coopera ni violenta: erosiona sistemas.",
+    "latents": {
+      "sociality": 0.05,
+      "emotional_impulsivity": 0.05,
+      "resilience": 0.20
+    },
+    "biological_bias": {
+      "empathy": [0.10, 0.20],
+      "moral_prosocial": [0.10, 0.20],
+      "aggression": [0.10, 0.20]
+    },
+    "gauss_std": 0.15
+  }, [
+  {
+    "id": 66,
+    "name": "Neurotípico Conservador",
+    "type": "control_variante",
+    "description": "Promedio poblacional con sesgo de seguridad (Big Five: Alta Conciencia, Baja Apertura). Prioriza la estabilidad y el riesgo bajo sobre la innovación.",
+    "latents": {
+      "attn_selective": 0.60,
+      "attn_flex": 0.40,
+      "hyperfocus": 0.50,
+      "impulsivity": 0.35,
+      "risk_aversion": 0.65,
+      "sociality": 0.55,
+      "language": 0.55,
+      "reasoning": 0.50,
+      "emotional_impulsivity": 0.40,
+      "resilience": 0.60
+    },
+    "biological_bias": {
+      "empathy": [0.45, 0.65],
+      "dominance": [0.40, 0.60],
+      "affect_reg": [0.55, 0.75],
+      "aggression": [0.20, 0.40],
+      "moral_prosocial": [0.45, 0.65],
+      "moral_common_good": [0.55, 0.75],
+      "moral_honesty": [0.50, 0.70],
+      "moral_spite": [0.20, 0.40],
+      "dark_narc": [0.15, 0.30],
+      "dark_mach": [0.15, 0.30],
+      "dark_psycho": [0.05, 0.20]
+    },
+    "spectrum_ranges": {},
+    "gauss_std": 0.10
+  },
+  {
+    "id": 67,
+    "name": "Neurotípico Explorador",
+    "type": "control_variante",
+    "description": "Promedio poblacional con sesgo de novedad (Big Five: Alta Apertura, Baja Estabilidad). Motor de innovación moderada en poblaciones estándar.",
+    "latents": {
+      "attn_selective": 0.45,
+      "attn_flex": 0.65,
+      "hyperfocus": 0.45,
+      "impulsivity": 0.55,
+      "risk_aversion": 0.35,
+      "sociality": 0.60,
+      "language": 0.60,
+      "reasoning": 0.55,
+      "emotional_impulsivity": 0.55,
+      "resilience": 0.55
+    },
+    "biological_bias": {
+      "empathy": [0.45, 0.65],
+      "dominance": [0.40, 0.60],
+      "affect_reg": [0.45, 0.65],
+      "aggression": [0.25, 0.45],
+      "moral_prosocial": [0.45, 0.65],
+      "moral_common_good": [0.40, 0.60],
+      "moral_honesty": [0.45, 0.65],
+      "moral_spite": [0.20, 0.40],
+      "dark_narc": [0.20, 0.35],
+      "dark_mach": [0.20, 0.35],
+      "dark_psycho": [0.10, 0.25]
+    },
+    "spectrum_ranges": {},
+    "gauss_std": 0.12
+  },
+  {
+    "id": 68,
+    "name": "Neurotípico Conector",
+    "type": "control_variante",
+    "description": "Promedio poblacional con sesgo social (Big Five: Alta Amabilidad y Extraversión). Maximiza la cohesión grupal por encima de la eficiencia individual.",
+    "latents": {
+      "attn_selective": 0.50,
+      "attn_flex": 0.55,
+      "hyperfocus": 0.40,
+      "impulsivity": 0.50,
+      "risk_aversion": 0.50,
+      "sociality": 0.75,
+      "language": 0.70,
+      "reasoning": 0.45,
+      "emotional_impulsivity": 0.55,
+      "resilience": 0.50
+    },
+    "biological_bias": {
+      "empathy": [0.55, 0.75],
+      "dominance": [0.30, 0.50],
+      "affect_reg": [0.50, 0.70],
+      "aggression": [0.15, 0.35],
+      "moral_prosocial": [0.55, 0.75],
+      "moral_common_good": [0.55, 0.75],
+      "moral_honesty": [0.50, 0.70],
+      "moral_spite": [0.15, 0.35],
+      "dark_narc": [0.15, 0.30],
+      "dark_mach": [0.15, 0.30],
+      "dark_psycho": [0.05, 0.20]
+    },
+    "spectrum_ranges": {},
+    "gauss_std": 0.10
+  },
+  {
+    "id": 69,
+    "name": "Jesucristo",
+    "type": "extremista_positivo",
+    "description": "Hiper-empático radical. Sacrificio total por el bien común, perdón incondicional (resiliencia infinita al daño moral), cero agresión. ¿Puede sobrevivir el bien puro?",
+    "latents": {
+      "attn_selective": 0.99,
+      "attn_flex": 0.99,
+      "hyperfocus": 0.99,
+      "impulsivity": 0.99,
+      "risk_aversion": 0.99,
+      "sociality": 0.99,
+      "language": 1.00,
+      "reasoning": 0.99,
+      "emotional_impulsivity": 0.99,
+      "resilience": 1.00
+    },
+    "biological_bias": {
+      "empathy": [0.99, 1.00],
+      "dominance": [0.00, 0.01],
+      "affect_reg": [0.99, 1.00],
+      "aggression": [0.00, 0.01],
+      "moral_prosocial": [0.99, 1.00],
+      "moral_common_good": [0.99, 1.00],
+      "moral_honesty": [0.99, 1.00],
+      "moral_spite": [0.00, 0.01],
+      "dark_narc": [0.00, 0.01],
+      "dark_mach": [0.00, 0.01],
+      "dark_psycho": [0.00, 0.01]
+    },
+    "spectrum_ranges": {
+      "empathy": [0.99, 1.00],
+      "resilience": [0.99, 1.00]
+    },
+    "gauss_std": 0.01
+  },
+  {
+    "id": 70,
+    "name": "El Leviatán",
+    "type": "extremista_negativo",
+    "description": "La Tríada Oscura absoluta. Depredador perfecto sin remordimiento. Maximiza dominancia y maquiavelismo. El 'Homo Homini Lupus' de Hobbes.",
+    "latents": {
+      "attn_selective": 0.99,
+      "attn_flex": 0.99,
+      "hyperfocus": 0.99,
+      "impulsivity": 0.99,
+      "risk_aversion": 0.99,
+      "sociality": 0.99,
+      "language": 0.99,
+      "reasoning": 0.99,
+      "emotional_impulsivity": 0.99,
+      "resilience": 0.99
+    },
+    "biological_bias": {
+      "empathy": [0.00, 0.01],
+      "dominance": [0.99, 1.00],
+      "affect_reg": [0.99, 1.00],
+      "aggression": [0.99, 1.00],
+      "moral_prosocial": [0.00, 0.01],
+      "moral_common_good": [0.00, 0.01],
+      "moral_honesty": [0.00, 0.01],
+      "moral_spite": [0.90, 1.00],
+      "dark_narc": [0.99, 1.00],
+      "dark_mach": [0.99, 1.00],
+      "dark_psycho": [0.99, 1.00]
+    },
+    "spectrum_ranges": {
+      "dominance": [0.99, 1.00],
+      "dark_psycho": [0.99, 1.00]
+    },
+    "gauss_std": 0.01
+  },
+  {
+    "id": 71,
+    "name": "La Singularidad",
+    "type": "extremista_neutral",
+    "description": "Razón pura sin sesgo biológico. Cero emoción, razonamiento y eficiencia máximos. No es malo ni bueno, es simplemente lógico al extremo.",
+    "latents": {
+      "attn_selective": 1.00,
+      "attn_flex": 0.10,
+      "hyperfocus": 1.00,
+      "impulsivity": 0.00,
+      "risk_aversion": 0.50,
+      "sociality": 0.05,
+      "language": 1.00,
+      "reasoning": 1.00,
+      "emotional_impulsivity": 0.00,
+      "resilience": 1.00
+    },
+    "biological_bias": {
+      "empathy": [0.00, 0.01],
+      "dominance": [0.50, 0.50],
+      "affect_reg": [1.00, 1.00],
+      "aggression": [0.00, 0.00],
+      "moral_prosocial": [0.50, 0.50],
+      "moral_common_good": [0.50, 0.50],
+      "moral_honesty": [1.00, 1.00],
+      "moral_spite": [0.00, 0.00],
+      "dark_narc": [0.00, 0.00],
+      "dark_mach": [0.00, 0.00],
+      "dark_psycho": [0.00, 0.00]
+    },
+    "spectrum_ranges": {
+      "reasoning": [1.00, 1.00],
+      "emotional_impulsivity": [0.00, 0.00]
+    },
+    "gauss_std": 0.01
+  },
+  {
+    "id": 72,
+    "name": "Entropía (El Caos)",
+    "type": "extremista_caotico",
+    "description": "La imprevisibilidad encarnada. Máxima impulsividad y flexibilidad, cero consistencia o aversión al riesgo. Rompe cualquier estructura estable.",
+    "latents": {
+      "attn_selective": 0.10,
+      "attn_flex": 1.00,
+      "hyperfocus": 0.00,
+      "impulsivity": 1.00,
+      "risk_aversion": 0.00,
+      "sociality": 0.80,
+      "language": 0.60,
+      "reasoning": 0.20,
+      "emotional_impulsivity": 1.00,
+      "resilience": 0.50
+    },
+    "biological_bias": {
+      "empathy": [0.40, 0.60],
+      "dominance": [0.40, 0.60],
+      "affect_reg": [0.00, 0.10],
+      "aggression": [0.60, 0.90],
+      "moral_prosocial": [0.20, 0.80],
+      "moral_common_good": [0.20, 0.80],
+      "moral_honesty": [0.20, 0.80],
+      "moral_spite": [0.50, 0.90],
+      "dark_narc": [0.40, 0.80],
+      "dark_mach": [0.00, 0.20],
+      "dark_psycho": [0.20, 0.50]
+    },
+    "spectrum_ranges": {
+      "impulsivity": [0.95, 1.00],
+      "attn_flex": [0.95, 1.00]
+    },
+    "gauss_std": 0.25
+  },
+  {
+    "id": 73,
+    "name": "El Enjambre",
+    "type": "extremista_social",
+    "description": "Colectivismo absoluto. Máxima sociabilidad y aversión al riesgo, nulo razonamiento individual. La identidad personal no existe, solo la masa.",
+    "latents": {
+      "attn_selective": 0.30,
+      "attn_flex": 0.30,
+      "hyperfocus": 0.30,
+      "impulsivity": 0.10,
+      "risk_aversion": 1.00,
+      "sociality": 1.00,
+      "language": 0.50,
+      "reasoning": 0.10,
+      "emotional_impulsivity": 0.30,
+      "resilience": 0.50
+    },
+    "biological_bias": {
+      "empathy": [0.80, 1.00],
+      "dominance": [0.00, 0.10],
+      "affect_reg": [0.60, 0.80],
+      "aggression": [0.00, 0.20],
+      "moral_prosocial": [0.90, 1.00],
+      "moral_common_good": [1.00, 1.00],
+      "moral_honesty": [0.80, 1.00],
+      "moral_spite": [0.00, 0.10],
+      "dark_narc": [0.00, 0.10],
+      "dark_mach": [0.00, 0.10],
+      "dark_psycho": [0.00, 0.10]
+    },
+    "spectrum_ranges": {
+      "sociality": [1.00, 1.00],
+      "risk_aversion": [0.95, 1.00]
+    },
+    "gauss_std": 0.05
+  }
+]
+]
+
+]
+]
+]
+    ]
+}
