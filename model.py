@@ -8,6 +8,10 @@ import os
 import random
 from typing import Dict, List, Tuple
 
+from deps import ensure_dependencies
+
+ensure_dependencies(["mesa", "numpy"], context="model.py")
+
 import numpy as np
 from mesa import Agent, DataCollector, Model
 from mesa.space import MultiGrid

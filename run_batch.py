@@ -1,5 +1,10 @@
 import csv
 import os
+
+from deps import ensure_dependencies
+
+ensure_dependencies(["numpy", "mesa"], context="run_batch.py")
+
 import numpy as np
 
 from model import SocietyModel, Citizen
