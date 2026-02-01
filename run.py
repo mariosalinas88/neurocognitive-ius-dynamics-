@@ -1,6 +1,11 @@
 import argparse
 import csv
 import os
+
+from deps import ensure_dependencies
+
+ensure_dependencies(["numpy", "pandas", "mesa"], context="run.py")
+
 import numpy as np
 import pandas as pd
 

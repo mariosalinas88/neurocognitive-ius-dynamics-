@@ -6,6 +6,10 @@ import threading
 import time
 from typing import Dict, List
 
+from deps import ensure_dependencies
+
+ensure_dependencies(["matplotlib", "numpy", "pandas", "solara", "mesa"], context="server.py")
+
 from matplotlib.backends.backend_agg import FigureCanvasAgg
 from matplotlib.figure import Figure
 import numpy as np
