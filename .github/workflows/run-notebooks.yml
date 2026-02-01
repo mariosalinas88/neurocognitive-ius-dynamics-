@@ -1,0 +1,46 @@
+name: Execute notebooks
+
+on:
+  push:
+    branches:
+      - "**"
+
+jobs:
+  run-notebooks:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f requirements.txt ]; then
+            pip install -r requirements.txt
+          fi
+          pip install jupyter nbconvert
+
+      - name: Execute notebooks
+        run: |
+          mkdir -p notebook-outputs
+          mapfile -t notebooks < <(find . -name "*.ipynb" -type f -not -path "./.venv/*")
+          if [ ${#notebooks[@]} -eq 0 ]; then
+            echo "No notebooks found."
+            exit 0
+          fi
+          for notebook in "${notebooks[@]}"; do
+            base_name="$(basename "${notebook}")"
+            jupyter nbconvert --to notebook --execute "${notebook}" --output "notebook-outputs/${base_name}"
+          done
+
+      - name: Upload executed notebooks
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: executed-notebooks
+          path: notebook-outputs
